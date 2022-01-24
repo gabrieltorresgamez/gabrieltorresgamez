@@ -1,6 +1,15 @@
-### Hi there 👋
+```cs
+namespace Devs {
+  public static class Gabo {
+    const string FullName = "Gabriel Torres Gamez";
+    const string Pronouns = "He/Him";
+    const string Studying = "Data Science at FHNW";
+    const string HomeTown = "Zürich, Switzerland";
+    public static Mood Vibe = Mood.Happy;
 
-- 🌱 I’m currently studying Data Science
-- 😄 Pronouns: He/Him
-- 😇 Fun fact: I'll go berserk if you cut your pasta
-- ❤️ With love until we die
+    public static void SeeCutPasta() {
+      Gabo.Vibe = Mood.Angry;
+    }
+  }
+}
+```
