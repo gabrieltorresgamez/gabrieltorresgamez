@@ -1,5 +1,5 @@
 <h1 align="center" id="gabrieltorresgamez-title">:wave: Hello there! I'm Gabo</h1>
-<h3 align="center">I'm a Data scientist and experienced software engineer 👨🏻‍💻</h3>
+<h3 align="center">I'm a data scientist and experienced software engineer 👨🏻‍💻</h3>
 
 <p align="center">
   <a href="https://github.com/gabrieltorresgamez/">
