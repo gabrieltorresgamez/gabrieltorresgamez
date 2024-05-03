@@ -13,19 +13,21 @@ Welcome to FUETOS ${Math.floor(new Date().getFullYear() / 100)}.${new Date().get
 
   System information as of ${new Date().toString()}:
 
-  System load: 0.0                Processes: 1
-  Usage of /: 32.9 % of 3.72GB    Users logged in: 1
-  Memory usage: 1 %               IP address for eth0: CENSORED
-  Swap usage: 0 %
+  System load:  0.0                 Processes:            1
+  Usage of /:   32.9 % of 3.72GB    Users logged in:      1
+  Memory usage: 1%                  IP address for eth0:  CENSORED
+  Swap usage:   0%
 
 0 updates can be installed immediately.
 0 of these updates are security updates.
 
-[[; white;]------------------------------------------------------------------
+[[; white;]----------------------------------------------------------------------
 
 [[; lime;]Hii! I'm Gabriel Torres Gamez and this is my portfolio. ✋😁
 To navigate through it, type in the command you want to execute below.
 The command "help" returns a list of commands 🤟
+
+[[; white;]----------------------------------------------------------------------
       `;
 
     this.Commands = {
