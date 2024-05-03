@@ -1,26 +1,37 @@
-import CV from "./cv.js";
+import Portfolio from "./portfolio.js";
 
 
 $.terminal.defaults.prompt = `[[;lime;]guest@gabrieltorresgamez[[;white;]:[[;DeepSkyBlue;]~[[;white;]$ `;
 
 $(function ($) {
-  const cv = new CV();
+  const portfolio = new Portfolio();
   const term = $("#app").terminal(
     function (command, term) {
       term.pause();
       var msg = "";
-      switch (command.toLowerCase().trim()) {
+      var args = command.toLowerCase().trim().split(' ');
+      switch (args[0]) {
+        case "sudo":
+        case "su":
+        case "rm":
+          msg = `[[;red;]get out of here hacker]`;
+          window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+          break;
         case "help":
-        case "ls":
-        case "ll":
-          msg = cv.getHelp();
+          /*case "ls":
+          case "ll":*/
+          if (args.length > 1) {
+            msg = `[[;red;]${args[0]}: invalid option -- ${args[1]}]`;
+          } else {
+            msg = portfolio.getHelp();
+          }
           break;
         case "home":
         case "exit":
           window.location = "/";
           break;
         default:
-          var results = cv.getInfo(command);
+          var results = portfolio.getInfo(command);
 
           if (results !== null) {
             msg = results;
@@ -37,10 +48,10 @@ $(function ($) {
     },
     {
       autocompleteMenu: true,
-      completion: Object.keys(cv.Commands)
+      completion: Object.keys(portfolio.Commands)
     }
   );
 
   term.clear();
-  term.echo(cv.getHomeScreen());
+  term.echo(portfolio.getHomeScreen());
 });
