@@ -1,7 +1,7 @@
 import Portfolio from "./portfolio.js";
 
 
-$.terminal.defaults.prompt = `[[;lime;]guest@gabrieltorresgamez[[;white;]:[[;DeepSkyBlue;]~[[;white;]$ `;
+$.terminal.defaults.prompt = `[[;lime;]guest@fuet.ch[[;white;]:[[;DeepSkyBlue;]~[[;white;]$ `;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));

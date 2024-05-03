@@ -97,6 +97,12 @@ You can find my GitHub profile at 🌐 https://github.com/gabrieltorresgamez
 You can find my LinkedIn profile at 🌐 https://www.linkedin.com/in/gabrieltorresgamez
       `,
 
+      blog: `
+      ## My blog ##
+You can find my blog at 🌐 https://fuet.ch
+      `,
+
+
       /*
             github(use_descriptions = false) {
               if (use_descriptions) return `## My GitHub Repos ##`;
