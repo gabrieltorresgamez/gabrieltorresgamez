@@ -1,6 +1,5 @@
 import Portfolio from "./portfolio.js";
 
-
 $.terminal.defaults.prompt = `[[;lime;]guest@fuet.ch[[;white;]:[[;DeepSkyBlue;]~[[;white;]$ `;
 
 function sleep(ms) {
