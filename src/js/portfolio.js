@@ -1,13 +1,13 @@
 class Portfolio {
   constructor() {
-    this.HomeMessage = `[[;grey;]███████╗██╗   ██╗███████╗████████╗     ██████╗ ███████╗
+    this.HomeMessage = `[[;lime;]███████╗██╗   ██╗███████╗████████╗     ██████╗ ███████╗
 ██╔════╝██║   ██║██╔════╝╚══██╔══╝    ██╔═══██╗██╔════╝
 █████╗  ██║   ██║█████╗     ██║       ██║   ██║███████╗
 ██╔══╝  ██║   ██║██╔══╝     ██║       ██║   ██║╚════██║
 ██║     ╚██████╔╝███████╗   ██║       ╚██████╔╝███████║
 ╚═╝      ╚═════╝ ╚══════╝   ╚═╝        ╚═════╝ ╚══════╝
                                    
-Welcome to FUETOS ${Math.floor(new Date().getFullYear() / 100)}.${new Date().getFullYear() % 100}.${new Date().getMonth() + 1} LTS (GNU/Linux 5.15.0-105-generic x86_64)
+[[;grey;]Welcome to FUETOS ${Math.floor(new Date().getFullYear() / 100)}.${new Date().getFullYear() % 100}.${new Date().getMonth() + 1} LTS (GNU/Linux 5.15.0-105-generic x86_64)
 
   System information as of ${new Date().toString()}:
 
