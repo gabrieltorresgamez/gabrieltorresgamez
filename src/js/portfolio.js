@@ -66,7 +66,7 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
   🏬 ABB Technikerschule
   📍 Baden, Aargau, Switzerland
 [[; grey;]
-  - Lecturer for the subject “Introduction to Data Science”.
+  - Lecturer for the subject “Data Science and Artificial Intelligence”.
   - Module development to start in summer 2024.
 
 💼 [[; DeepPink;]Data Scientist
@@ -114,7 +114,7 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
 
 🛡️ [[; DeepSkyBlue;]Adversarial Attacks in medicine
 [[; white;]
-  Development of defences against universal adversarial attacks in image classification models.
+  Enhancing the robustness of disease detection models against universal adversarial attacks.
   https://github.com/AdversarialAttacks
 
 🌞 [[; DeepPink;]FlareSense
@@ -124,7 +124,7 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
 
 📱 [[; DeepPink;]Sensor Based Activity Recognition
 [[; white;]
-  Development of an activity recognition model based on sensor data from smartphones.
+  Using smartphone sensors to classify movement and workout profiles.
   https://github.com/Sensor-Based-Activity-Recognition
 
 🏡 [[; DeepPink;]Real Estate Price Prediction
