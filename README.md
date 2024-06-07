@@ -11,9 +11,6 @@
   <a href="https://torres.swiss">
     <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Ftorres.swiss">
   </a>
-  <a href="https://fuet.ch">
-    <img alt="Blog" src="https://img.shields.io/website?url=https%3A%2F%2Ffuet.ch">
-  </a>
   <a href="https://www.linkedin.com/in/gabrieltorresgamez/">
     <img alt="LinkedIn" src="https://img.shields.io/badge/Linked-0077B5?logo=linkedin">
   </a>
