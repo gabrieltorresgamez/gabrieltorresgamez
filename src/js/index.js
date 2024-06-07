@@ -1,6 +1,6 @@
 import Portfolio from "./portfolio.js";
 
-$.terminal.defaults.prompt = `[[;lime;]guest@fuet.ch[[;white;]:[[;DeepSkyBlue;]~[[;white;]$ `;
+$.terminal.defaults.prompt = `[[;lime;]guest@torres.swiss[[;white;]:[[;DeepSkyBlue;]~[[;white;]$ `;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));

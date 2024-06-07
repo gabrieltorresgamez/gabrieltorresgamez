@@ -8,8 +8,11 @@
   <a href="https://github.com/gabrieltorresgamez?tab=followers">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/gabrieltorresgamez?style=flat&logo=github">
   </a>
-  <a href="https://portfolio.fuet.ch">
-    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fportfolio.fuet.ch">
+  <a href="https://torres.swiss">
+    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Ftorres.swiss">
+  </a>
+  <a href="https://fuet.ch">
+    <img alt="Blog" src="https://img.shields.io/website?url=https%3A%2F%2Ffuet.ch">
   </a>
   <a href="https://www.linkedin.com/in/gabrieltorresgamez/">
     <img alt="LinkedIn" src="https://img.shields.io/badge/Linked-0077B5?logo=linkedin">
