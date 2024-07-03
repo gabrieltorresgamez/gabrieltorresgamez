@@ -67,7 +67,7 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
   📍 Baden, Aargau, Switzerland
 [[; grey;]
   - Lecturer for the subject “Data Science and Artificial Intelligence”.
-  - Module development to start in summer 2024.
+  - Module development currently ongoing.
 
 💼 [[; DeepPink;]Data Scientist
 [[; grey;]
