@@ -39,15 +39,21 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
       education: `
 ## My educational background ##
 
-🎓 [[; DeepSkyBlue;]B.Sc.in Data Science
+🎓 [[; DeepSkyBlue;]CAS Software Architecture
+[[; grey;]
+  📅 09.2026 - now
+  🏬 HSLU - Lucerne University of Applied Sciences and Arts
+  📍 Rotkreuz, Zug, Switzerland
+
+🎓 [[; DeepPink;]B.Sc. in Data Science
 [[; grey;]
   📅 09.2021 - 02.2025
-  🏬 FHNW - University of Applied Sciencs and Arts Northwestern Switzerland FHNW
+  🏬 FHNW - University of Applied Sciences and Arts Northwestern Switzerland
   📍 Brugg, Aargau, Switzerland
 [[; white;]
   - Several interdisciplinary projects in areas such as AI security, astronomy, sensor technology, IoT, real estate and air quality.
   - Strong focus on deep learning, including adversarial attacks, computer vision, natural language processing, signal processing, and social network analysis.
-  - Regularly approached by colleagues for advice on a broad range of technical challenges.
+  - Regularly approached by fellow students for advice on a broad range of technical challenges.
 
 🎓 [[; DeepPink;]Vocational Training in Software Development (EFZ)
 🎓 Vocational Baccalaureate (BM1 TALS)
@@ -60,14 +66,47 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
       work: `
 ## My work experience ##
 
-💼 [[; Grey;]Lecturer (starting April 2025)
+💼 [[; DeepSkyBlue;]Application Engineer - Data & Integration
 [[; grey;]
-  📅 04.2025 - 03.2030
+  📅 07.2025 - now
+  🏬 UMB AG
+  📍 Urdorf, Zürich, Switzerland
+[[; white;]
+  - Developed and maintained the company-wide enterprise service management platform OMNITRACKER across 12 business areas, from implementation to production release.
+  - Led the implementation of absence and vacation management, including fully automated vacation entitlement calculation.
+  - Designed and rolled out REST APIs for ServiceNow time tracking and customer ticketing, and migrated the SharePoint interface to the Microsoft Graph API.
+  - Held technical ownership of the company-wide physical access control system, including migration to its successor product.
+  - Built a Python MCP server giving the team's AI assistants structured access to product documentation and system knowledge.
+  - Co-authored the team's development guidelines and gave internal tech talks on Git, CI/CD, logging, and AI-assisted development.
+
+💼 [[; DeepSkyBlue;]Lecturer FH
+[[; grey;]
+  📅 02.2025 - now
+  🏬 FHNW - University of Applied Sciences and Arts Northwestern Switzerland
+  📍 Brugg, Aargau, Switzerland
+[[; white;]
+  - Lecturer for the course “Web Data Acquisition” in the B.Sc. Data Science program.
+
+💼 [[; DeepPink;]Lecturer HF
+[[; grey;]
+  📅 04.2024 - 06.2025
   🏬 ABB Technikerschule
   📍 Baden, Aargau, Switzerland
+[[; white;]
+  - Designed and lectured “Data Science & Artificial Intelligence” for HF programs in Building Automation and Energy & Environmental Engineering.
+
+💼 [[; DeepPink;]Junior Data Engineer
 [[; grey;]
-  - Lecturer for the subject “Data Science and Artificial Intelligence”.
-  - Module development currently ongoing.
+  📅 08.2024 - 04.2025
+  🏬 Baloise Asset Management
+  📍 Basel, Switzerland
+[[; white;]
+  - Conducted requirements analysis and designed, implemented, and managed a Product Master database using PostgreSQL.
+  - Developed Python-based data import and export pipelines ensuring reliable Excel-based workflows.
+  - Implemented Mage-ETL pipelines on OpenShift infrastructure with Jenkins CI/CD for continuous deployment and on-demand execution.
+  - Mentored a working student in developing a user-friendly frontend interface for displaying Product Master data and file management through established pipelines.
+  - Coached the product management team in utilizing the implemented data management solution and enabled independent usage.
+  - Created structured programming guidelines according to modern industry standards.
 
 💼 [[; DeepPink;]Data Scientist
 [[; grey;]
@@ -136,6 +175,19 @@ Ambitious, analytical, curious, with strong team collaboration abilities.]
 [[; white;]
   Development of a complete IoT solution for monitoring and evaluating air quality in classrooms.
   https://github.com/Smart-Classroom-Challenge
+`,
+
+      certificates: `
+## My certificates ##
+[[; white;]
+  2025  ITIL Foundation Certificate in IT Service Management, PeopleCert
+  2025  Azure Fundamentals, Microsoft
+  2023  Data Hackdays BE 2023, Kanton Bern
+  2022  MAKEathon 2022, FHNW
+  2021  Betreuung von Jugendlichen 2, CURAVIVA
+  2020  Betreuung von Jugendlichen 1, CURAVIVA
+  2020  Kommunikation und Betreuung (KoBe), Swiss Red Cross
+  2018  Certificado de Lengua y Cultura Españolas - C1, Ministerio de Educación de España]
 `,
 
       contact: `
