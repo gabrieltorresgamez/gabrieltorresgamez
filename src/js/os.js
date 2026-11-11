@@ -19,26 +19,30 @@
   function open(win, opts) {
     opts = opts || {};
     if (!isOS()) {
-      win.scrollIntoView();
+      win.scrollIntoView({ behavior: opts.instant ? 'instant' : 'auto' });
     } else {
       var wasOpen = win.classList.contains('open');
+      // Keyboard-initiated opens and closes are instant; only pointer actions animate.
+      win.classList.toggle('instant', !!opts.instant);
       win.classList.add('open');
       front(win);
       var icon = iconFor(win);
       if (icon) icon.setAttribute('aria-current', 'true');
       if (win.id === 'terminal') termBody.scrollTop = termBody.scrollHeight;
-      if (!wasOpen && opts.from) {
-        // Grow from the icon that opened it.
+      if (!wasOpen && icon && !opts.instant) {
+        // Grow from the window's icon, and shrink back to it on close.
         var r = win.getBoundingClientRect();
-        var i = opts.from.getBoundingClientRect();
+        var i = icon.getBoundingClientRect();
         win.style.transformOrigin = (i.left + i.width / 2 - r.left) + 'px ' + (i.top + i.height / 2 - r.top) + 'px';
       }
     }
     if (opts.focus !== false) (win.id === 'terminal' ? termIn : win).focus({ preventScroll: isOS() });
   }
 
-  function close(win) {
+  function close(win, instant) {
+    win.classList.toggle('instant', !!instant);
     win.classList.remove('open', 'front');
+    win.setMax(false);
     var icon = iconFor(win);
     if (icon) {
       icon.removeAttribute('aria-current');
@@ -54,7 +58,7 @@
     var win = a && document.getElementById(a.hash.slice(1));
     if (!win || !isOS()) return; // stacked page: let the anchor scroll
     e.preventDefault();
-    open(win, { from: a });
+    open(win, { instant: e.detail === 0 }); // detail 0: activated with the keyboard
   });
 
   wins.forEach(function (win) {
@@ -62,14 +66,29 @@
     var pos = { x: 0, y: 0 };
 
     win.addEventListener('pointerdown', function () { if (isOS()) front(win); });
-    win.querySelector('.win-close').addEventListener('click', function () { close(win); });
+    win.querySelector('.win-close').addEventListener('click', function (e) { close(win, e.detail === 0); });
     win.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && isOS()) close(win);
+      if (e.key === 'Escape' && isOS()) close(win, true);
+    });
+
+    // Maximise: the button or a double-click on the title bar fills the desk; the same again restores.
+    var maxBtn = win.querySelector('.win-max');
+    var fileName = win.querySelector('.win-name').textContent;
+    win.setMax = function (on) {
+      win.classList.toggle('max', on);
+      win.style.translate = on || !(pos.x || pos.y) ? '' : pos.x + 'px ' + pos.y + 'px';
+      maxBtn.setAttribute('aria-label', (on ? 'Restore ' : 'Maximise ') + fileName);
+      maxBtn.querySelector('use').setAttribute('href', on ? '#i-restore' : '#i-max');
+      if (win.id === 'terminal') termBody.scrollTop = termBody.scrollHeight;
+    };
+    maxBtn.addEventListener('click', function () { win.setMax(!win.classList.contains('max')); });
+    bar.addEventListener('dblclick', function (e) {
+      if (isOS() && !e.target.closest('button')) win.setMax(!win.classList.contains('max'));
     });
 
     // Drag by the title bar. The offset goes straight onto `translate`, so opening (`scale`) stays independent.
     bar.addEventListener('pointerdown', function (e) {
-      if (!isOS() || e.button !== 0 || e.target.closest('button') || win.classList.contains('dragging')) return;
+      if (!isOS() || e.button !== 0 || e.target.closest('button') || win.classList.contains('dragging') || win.classList.contains('max')) return;
       var r = win.getBoundingClientRect();
       var d = desk.getBoundingClientRect();
       var start = { x: e.clientX - pos.x, y: e.clientY - pos.y };
@@ -97,7 +116,7 @@
 
     win.resetPosition = function () {
       pos.x = pos.y = 0;
-      win.style.translate = '';
+      win.setMax(false);
     };
   });
 
@@ -105,7 +124,7 @@
   osQuery.addEventListener('change', function (e) {
     root.classList.toggle('os', e.matches);
     wins.forEach(function (w) { w.resetPosition(); });
-    if (e.matches && !document.querySelector('.win.open')) openInitial();
+    if (e.matches && !document.querySelector('.win.open')) { opened = false; openInitial(); }
   });
 
   // ---- Clock ----
@@ -221,7 +240,7 @@
       var id = files[(arg || '').replace(/\.md$/, '')];
       if (!id) return print('open: no such file: ' + (arg || '') + '\nTry: open work', 'err');
       print('Opening ' + id + ' …');
-      open(document.getElementById(id), { focus: !isOS() });
+      open(document.getElementById(id), { focus: !isOS(), instant: true });
       if (isOS()) front(document.getElementById('terminal')); // keep the prompt you are typing into on top
     },
     neofetch: function () {
@@ -232,7 +251,7 @@
     privacy: function () { location.href = 'privacy/'; },
     clear: function () { termOut.textContent = ''; },
     exit: function () {
-      if (isOS()) close(document.getElementById('terminal'));
+      if (isOS()) close(document.getElementById('terminal'), true);
       else print('There is no escape on a phone. Scroll up instead.');
     }
   };
@@ -291,13 +310,15 @@
   print('Type "help" for a list of commands.');
 
   // ---- Start ----
+  var opened = false;
   function openInitial() {
-    if (!isOS()) return;
+    if (!isOS() || opened) return;
+    opened = true;
     var about = document.getElementById('about');
     // The terminal only fits beside about.md on wide screens; elsewhere it waits behind its icon.
     if (!matchMedia('(min-width: 90rem)').matches) return open(about, { focus: false });
     open(document.getElementById('terminal'), { focus: false });
-    setTimeout(function () { open(about, { focus: false }); }, 120);
+    setTimeout(function () { open(about, { focus: false }); }, 70);
   }
 
   if (root.classList.contains('booting')) {
@@ -309,6 +330,8 @@
       removeEventListener('keydown', done);
       openInitial();
     };
+    // The windows start opening as the boot screen begins to fade, so the two overlap.
+    boot.addEventListener('animationstart', function (e) { if (e.target === boot) openInitial(); });
     boot.addEventListener('animationend', function (e) { if (e.target === boot) done(); });
     addEventListener('pointerdown', done); // any click or key skips it
     addEventListener('keydown', done);

@@ -278,7 +278,9 @@ One per page: the main call to action.
 Every focusable control shows a 2px ink outline, offset by 2px (orange inside the terminal).
 
 ### Motion
-- **Boot:** a dark full-screen log that plays once per browser session, on first load only. Four lines appear at 200, 420, 640 and 900ms, each instantly. The screen fades out over 240ms from 1250ms. Any click or key skips it. It runs in CSS, so it ends even if the script fails.
+- **Boot:** a dark full-screen log that plays once per browser session, on first load only. Three log lines print at 400, 750 and 1200ms, and each `[ ok ]` arrives 200, 250 and 800ms after its line, so the rhythm is uneven on purpose. The welcome line prints at 2300ms. A block cursor blinks in steps on the line being worked on. The screen fades out in four steps over 240ms from 3000ms, and the windows start opening as the fade starts. Any click or key skips it. It runs in CSS, so it ends even if the script fails.
+- **Pointer only:** windows animate when opened or closed with the mouse. Anything started from the keyboard (Enter on an icon, Escape, the terminal's `open` and `exit`) happens at once, with no transition. Every window grows from its own icon and shrinks back to it.
+- **Maximise:** the square button in a title bar, or a double-click on the bar, makes the window fill the desk with a 0.75rem margin (1.75rem at the bottom, so the Privacy link stays visible); the same again restores it. The switch is instant, the text column stays at most 44rem wide (the terminal uses the full width), and a maximised window cannot be dragged. Closing a window restores it.
 - **Open:** a window fades in and scales from 0.96 to 1 in 180ms with the ease-out curve `cubic-bezier(0.23, 1, 0.32, 1)`. A window opened from an icon grows from that icon.
 - **Close:** a window fades out and scales to 0.97 in 120ms.
 - **Start:** on wide desktops the terminal opens first and `about.md` follows 120ms later.

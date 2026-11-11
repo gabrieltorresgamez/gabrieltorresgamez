@@ -294,7 +294,7 @@
       },
       {
         "name": "boot-out",
-        "value": "240ms ease-out, after 1250ms",
+        "value": "240ms steps(4), after 3000ms",
         "purpose": "Fade-out of the boot screen. Once per session; any click or key skips it."
       },
       {

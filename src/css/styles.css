@@ -248,7 +248,11 @@ a.brand {
   font: 500 0.8125rem/1 var(--mono);
 }
 
-.win-close {
+.win-name {
+  margin-right: auto;
+}
+
+.win-btn {
   display: none;
   place-items: center;
   width: 2.25rem;
@@ -262,16 +266,16 @@ a.brand {
   transition: scale 140ms var(--ease-out);
 }
 
-.win-close:active {
-  scale: 0.9;
+.win-btn:active {
+  scale: 0.95;
 }
 
-.win-close:focus-visible {
+.win-btn:focus-visible {
   outline-offset: -4px;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .win-close:hover {
+  .win-btn:hover {
     color: var(--link);
   }
 }
@@ -493,7 +497,7 @@ mark::selection {
   color: var(--term-mute);
 }
 
-.term .win-close {
+.term .win-btn {
   color: var(--term-ink);
 }
 
@@ -502,7 +506,7 @@ mark::selection {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .term .win-close:hover {
+  .term .win-btn:hover {
     color: var(--orange);
   }
 }
@@ -620,7 +624,7 @@ html.booting .boot {
   background: var(--term-bg);
   color: var(--term-ink);
   font: 0.875rem/1.5 var(--mono);
-  animation: boot-out 240ms 1250ms ease-out forwards;
+  animation: boot-out 240ms 3000ms steps(4) forwards;
 }
 
 .boot-logo {
@@ -631,37 +635,75 @@ html.booting .boot {
   line-height: 1;
 }
 
+/* Each line prints at --t; its [ ok ] arrives --ok later, as if the step took that long.
+   The gaps are uneven on purpose: two quick steps, then one that hangs. */
 .boot p {
   margin: 0;
   opacity: 0;
-  animation: boot-line 1ms forwards;
+  animation: boot-line 1ms var(--t) forwards;
 }
 
 .boot p:nth-of-type(1) {
-  animation-delay: 200ms;
+  --t: 400ms;
+  --ok: 200ms;
+  --next: 750ms;
 }
 
 .boot p:nth-of-type(2) {
-  animation-delay: 420ms;
+  --t: 750ms;
+  --ok: 250ms;
+  --next: 1200ms;
 }
 
 .boot p:nth-of-type(3) {
-  animation-delay: 640ms;
+  --t: 1200ms;
+  --ok: 800ms;
+  --next: 2300ms;
 }
 
 .boot p:nth-of-type(4) {
+  --t: 2300ms;
   margin-top: 0.75rem;
-  animation-delay: 900ms;
 }
 
 .boot b {
   color: var(--orange);
   font-weight: 500;
+  opacity: 0;
+  animation: boot-line 1ms calc(var(--t) + var(--ok)) forwards;
+}
+
+/* Block cursor on the line being worked on. It blinks in steps and leaves when the next line prints. */
+.boot p::after {
+  content: '';
+  display: inline-block;
+  width: 0.6em;
+  height: 1.15em;
+  margin-left: 0.5em;
+  background: var(--orange);
+  vertical-align: text-bottom;
+  animation: boot-blink 600ms steps(1) infinite, boot-cursor-off 1ms var(--next) forwards;
+}
+
+.boot p:nth-of-type(4)::after {
+  animation: boot-blink 600ms steps(1) infinite;
 }
 
 @keyframes boot-line {
   to {
     opacity: 1;
+  }
+}
+
+@keyframes boot-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes boot-cursor-off {
+  to {
+    visibility: hidden;
   }
 }
 
@@ -763,6 +805,10 @@ html.os,
   transition-duration: 120ms;
 }
 
+.os .win.instant {
+  transition: none;
+}
+
 @starting-style {
   .os .win.open {
     opacity: 0;
@@ -778,11 +824,27 @@ html.os,
   -webkit-user-select: none;
 }
 
+/* Maximised: the window fills the desk; the text column keeps a readable width. */
+.os #desk .win.max {
+  inset: 0.75rem 0.75rem 1.75rem; /* leaves the Privacy link visible underneath */
+  width: auto;
+  height: auto;
+  max-height: none;
+}
+
+.os .win.max .win-bar {
+  cursor: default;
+}
+
+.os .win.max:not(.term) .win-body {
+  padding-inline: max(1.5rem, calc((100% - 44rem) / 2));
+}
+
 .os .win.dragging .win-bar {
   cursor: grabbing;
 }
 
-.os .win-close {
+.os .win-btn {
   display: grid;
 }
 
@@ -855,7 +917,7 @@ html.os,
 
   .files a,
   .btn,
-  .win-close {
+  .win-btn {
     transition: none;
   }
 }
