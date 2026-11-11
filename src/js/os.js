@@ -12,7 +12,12 @@
 
   // ---- Windows ----
   function front(win) {
-    wins.forEach(function (w) { w.classList.toggle('front', w === win); });
+    wins.forEach(function (w) {
+      w.classList.toggle('front', w === win);
+      // The front window's icon is "current"; other open windows keep a quieter open mark.
+      var icon = iconFor(w);
+      if (icon) w === win ? icon.setAttribute('aria-current', 'true') : icon.removeAttribute('aria-current');
+    });
     win.style.zIndex = ++z;
   }
 
@@ -27,7 +32,7 @@
       win.classList.add('open');
       front(win);
       var icon = iconFor(win);
-      if (icon) icon.setAttribute('aria-current', 'true');
+      if (icon) icon.classList.add('is-open');
       if (win.id === 'terminal') termBody.scrollTop = termBody.scrollHeight;
       if (!wasOpen && icon && !opts.instant) {
         // Grow from the window's icon, and shrink back to it on close.
@@ -45,6 +50,7 @@
     win.setMax(false);
     var icon = iconFor(win);
     if (icon) {
+      icon.classList.remove('is-open');
       icon.removeAttribute('aria-current');
       icon.focus();
     }

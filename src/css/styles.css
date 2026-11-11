@@ -1,4 +1,4 @@
-/* TORRES OS. Tokens after the Zapier-derived DESIGN.md used on fuet.ch. */
+/* TORRES OS. Dark coffee desktop with one orange accent; values shared with fuet.ch and arc.fuet.ch. */
 @font-face {
   font-family: 'Bricolage Grotesque Variable';
   font-style: normal;
@@ -8,18 +8,20 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --orange: #ff4f00;
-  --canvas: #fffefb;
-  --canvas-soft: #f8f4f0;
-  --ink: #201515;
-  --body: #605d52;
-  --hairline: #c5c0b1;
-  --border: #939084;
-  --link: #c2410c;
-  --selection: #ffe3d5;
-  --term-bg: #1a1210;
-  --term-soft: #241c19;
+  --on-orange: #201515; /* text on orange and on cream fills */
+  --ground: #1a1210; /* the wallpaper */
+  --canvas: #241c19; /* windows and the menu bar */
+  --canvas-soft: #2f2622;
+  --ink: #fffefb;
+  --body: #c5c0b1;
+  --hairline: #4a4039;
+  --border: #807d72;
+  --link: #ff6a26;
+  --selection: #7c2d12;
+  --term-bg: #120c0a;
+  --term-soft: #1a1210;
   --term-line: #3a332d;
   --term-ink: #fffefb;
   --term-mute: #c5c0b1;
@@ -47,13 +49,13 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-padding-top: calc(var(--bar) + 1rem);
-  scrollbar-color: var(--ink) var(--orange);
+  scrollbar-color: var(--hairline) var(--ground);
 }
 
 body {
   margin: 0;
   min-height: 100dvh;
-  background: var(--orange);
+  background: var(--ground);
   color: var(--ink);
   font: 1.0625rem/1.6 var(--sans);
   caret-color: var(--orange);
@@ -110,7 +112,7 @@ a {
   height: var(--bar);
   padding: 0 var(--gutter);
   background: var(--canvas);
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid var(--hairline);
   font-size: 0.875rem;
 }
 
@@ -170,6 +172,7 @@ a.brand {
 
 .hero h1 {
   margin: 0;
+  color: var(--orange);
   font: 700 clamp(2.75rem, 12vw, 5rem)/0.92 var(--display);
   letter-spacing: -0.03em;
   text-wrap: balance;
@@ -211,22 +214,26 @@ a.brand {
   scale: 0.97;
 }
 
+.files a.is-open span {
+  background: var(--canvas-soft);
+}
+
 .files a[aria-current] span {
-  background: var(--ink);
-  color: var(--canvas);
+  background: var(--orange);
+  color: var(--on-orange);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .files a:hover span {
     background: var(--ink);
-    color: var(--canvas);
+    color: var(--on-orange);
   }
 }
 
 /* Windows */
 .win {
   background: var(--canvas);
-  border: 1px solid var(--ink);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius);
   overflow: hidden;
   scroll-margin-top: calc(var(--bar) + 1rem);
@@ -337,7 +344,7 @@ a.brand {
   color: var(--border);
 }
 
-/* Highlights in the files: a marker for key terms, ink for the organisation, rust for current roles. */
+/* Highlights in the files: a marker for key terms, ink for the organisation, the link orange for current roles. */
 mark {
   padding: 0.05em 0.15em;
   margin: 0 -0.15em;
@@ -348,6 +355,7 @@ mark {
 
 mark::selection {
   background: var(--orange);
+  color: var(--on-orange);
 }
 
 .entry .meta b {
@@ -374,7 +382,7 @@ mark::selection {
 
 .about-top img {
   flex: none;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--hairline);
   border-radius: var(--radius);
 }
 
@@ -403,7 +411,7 @@ mark::selection {
   padding: 0.75rem 1.25rem;
   border-radius: var(--radius);
   background: var(--orange);
-  color: var(--ink);
+  color: var(--on-orange);
   font-size: 1.0625rem;
   font-weight: 600;
   text-decoration: none;
@@ -417,7 +425,7 @@ mark::selection {
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
     background: var(--ink);
-    color: var(--canvas);
+    color: var(--on-orange);
   }
 }
 
@@ -478,7 +486,7 @@ mark::selection {
   color: var(--ink);
 }
 
-/* Terminal: the one dark window */
+/* Terminal: the darkest window */
 .term {
   background: var(--term-bg);
   color: var(--term-ink);
@@ -488,7 +496,7 @@ mark::selection {
 
 .term ::selection {
   background: var(--orange);
-  color: var(--ink);
+  color: var(--on-orange);
 }
 
 .term .win-bar {
@@ -774,12 +782,13 @@ html.os,
   display: flex;
   flex-direction: column;
   max-height: calc(100% - 2rem);
-  box-shadow: 0 8px 20px -12px rgb(32 21 21 / 0.45);
+  box-shadow: 0 8px 20px -12px rgb(0 0 0 / 0.6);
   transition: opacity 180ms var(--ease-out), scale 180ms var(--ease-out), display 180ms allow-discrete;
 }
 
 .os .win.front {
-  box-shadow: 0 22px 44px -16px rgb(32 21 21 / 0.6);
+  box-shadow: 0 22px 44px -14px rgb(0 0 0 / 0.8);
+  border-color: var(--border);
 }
 
 .os .win:not(.front) .win-bar {

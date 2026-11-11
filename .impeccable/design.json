@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-11T19:44:56Z",
+  "generatedAt": "2026-11-11T21:50:51Z",
   "title": "Design System: TORRES OS",
   "extensions": {
     "colorMeta": {
@@ -15,58 +15,28 @@
           "oklch(50% 0.222 37)",
           "oklch(62% 0.222 37)",
           "oklch(73% 0.222 37)",
-          "oklch(84% 0.183 37)",
+          "oklch(84% 0.182 37)",
           "oklch(95% 0.138 37)"
         ]
       },
       "link": {
         "role": "secondary",
-        "displayName": "Rust Link",
-        "canonical": "#c2410c",
+        "displayName": "Link Orange",
+        "canonical": "#ff6a26",
         "tonalRamp": [
-          "oklch(15% 0.108 38)",
-          "oklch(27% 0.146 38)",
-          "oklch(38% 0.174 38)",
-          "oklch(50% 0.174 38)",
-          "oklch(62% 0.174 38)",
-          "oklch(73% 0.174 38)",
-          "oklch(84% 0.143 38)",
-          "oklch(95% 0.108 38)"
+          "oklch(15% 0.122 42)",
+          "oklch(27% 0.165 42)",
+          "oklch(38% 0.197 42)",
+          "oklch(50% 0.197 42)",
+          "oklch(62% 0.197 42)",
+          "oklch(73% 0.197 42)",
+          "oklch(84% 0.161 42)",
+          "oklch(95% 0.122 42)"
         ]
       },
-      "canvas": {
+      "on-orange": {
         "role": "neutral",
-        "displayName": "Cream Canvas",
-        "canonical": "#fffefb",
-        "tonalRamp": [
-          "oklch(15% 0.003 91)",
-          "oklch(27% 0.003 91)",
-          "oklch(38% 0.004 91)",
-          "oklch(50% 0.004 91)",
-          "oklch(62% 0.004 91)",
-          "oklch(73% 0.004 91)",
-          "oklch(84% 0.003 91)",
-          "oklch(95% 0.003 91)"
-        ]
-      },
-      "canvas-soft": {
-        "role": "neutral",
-        "displayName": "Soft Canvas",
-        "canonical": "#f8f4f0",
-        "tonalRamp": [
-          "oklch(15% 0.004 68)",
-          "oklch(27% 0.006 68)",
-          "oklch(38% 0.007 68)",
-          "oklch(50% 0.007 68)",
-          "oklch(62% 0.007 68)",
-          "oklch(73% 0.007 68)",
-          "oklch(84% 0.006 68)",
-          "oklch(95% 0.004 68)"
-        ]
-      },
-      "ink": {
-        "role": "neutral",
-        "displayName": "Coffee Ink",
+        "displayName": "Coffee On Orange",
         "canonical": "#201515",
         "tonalRamp": [
           "oklch(15% 0.011 19)",
@@ -79,24 +49,69 @@
           "oklch(95% 0.011 19)"
         ]
       },
-      "body": {
+      "ground": {
         "role": "neutral",
-        "displayName": "Warm Grey",
-        "canonical": "#605d52",
+        "displayName": "Coffee Ground",
+        "canonical": "#1a1210",
         "tonalRamp": [
-          "oklch(15% 0.011 94)",
-          "oklch(27% 0.015 94)",
-          "oklch(38% 0.018 94)",
-          "oklch(50% 0.018 94)",
-          "oklch(62% 0.018 94)",
-          "oklch(73% 0.018 94)",
-          "oklch(84% 0.014 94)",
-          "oklch(95% 0.011 94)"
+          "oklch(15% 0.009 34)",
+          "oklch(27% 0.012 34)",
+          "oklch(38% 0.014 34)",
+          "oklch(50% 0.014 34)",
+          "oklch(62% 0.014 34)",
+          "oklch(73% 0.014 34)",
+          "oklch(84% 0.011 34)",
+          "oklch(95% 0.009 34)"
         ]
       },
-      "hairline": {
+      "canvas": {
         "role": "neutral",
-        "displayName": "Hairline",
+        "displayName": "Coffee Canvas",
+        "canonical": "#241c19",
+        "tonalRamp": [
+          "oklch(15% 0.009 42)",
+          "oklch(27% 0.012 42)",
+          "oklch(38% 0.014 42)",
+          "oklch(50% 0.014 42)",
+          "oklch(62% 0.014 42)",
+          "oklch(73% 0.014 42)",
+          "oklch(84% 0.011 42)",
+          "oklch(95% 0.009 42)"
+        ]
+      },
+      "canvas-soft": {
+        "role": "neutral",
+        "displayName": "Soft Canvas",
+        "canonical": "#2f2622",
+        "tonalRamp": [
+          "oklch(15% 0.01 45)",
+          "oklch(27% 0.013 45)",
+          "oklch(38% 0.015 45)",
+          "oklch(50% 0.015 45)",
+          "oklch(62% 0.015 45)",
+          "oklch(73% 0.015 45)",
+          "oklch(84% 0.013 45)",
+          "oklch(95% 0.01 45)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Cream Ink",
+        "canonical": "#fffefb",
+        "tonalRamp": [
+          "oklch(15% 0.003 91)",
+          "oklch(27% 0.003 91)",
+          "oklch(38% 0.004 91)",
+          "oklch(50% 0.004 91)",
+          "oklch(62% 0.004 91)",
+          "oklch(73% 0.004 91)",
+          "oklch(84% 0.003 91)",
+          "oklch(95% 0.003 91)"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Sand",
         "canonical": "#c5c0b1",
         "tonalRamp": [
           "oklch(15% 0.013 92)",
@@ -109,39 +124,69 @@
           "oklch(95% 0.013 92)"
         ]
       },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#4a4039",
+        "tonalRamp": [
+          "oklch(15% 0.011 57)",
+          "oklch(27% 0.015 57)",
+          "oklch(38% 0.018 57)",
+          "oklch(50% 0.018 57)",
+          "oklch(62% 0.018 57)",
+          "oklch(73% 0.018 57)",
+          "oklch(84% 0.015 57)",
+          "oklch(95% 0.011 57)"
+        ]
+      },
       "border": {
         "role": "neutral",
         "displayName": "Stone",
-        "canonical": "#939084",
+        "canonical": "#807d72",
         "tonalRamp": [
-          "oklch(15% 0.011 95)",
-          "oklch(27% 0.015 95)",
-          "oklch(38% 0.018 95)",
-          "oklch(50% 0.018 95)",
-          "oklch(62% 0.018 95)",
-          "oklch(73% 0.018 95)",
-          "oklch(84% 0.015 95)",
-          "oklch(95% 0.011 95)"
+          "oklch(15% 0.01 94)",
+          "oklch(27% 0.014 94)",
+          "oklch(38% 0.017 94)",
+          "oklch(50% 0.017 94)",
+          "oklch(62% 0.017 94)",
+          "oklch(73% 0.017 94)",
+          "oklch(84% 0.014 94)",
+          "oklch(95% 0.01 94)"
         ]
       },
       "selection": {
         "role": "neutral",
-        "displayName": "Peach Selection",
-        "canonical": "#ffe3d5",
+        "displayName": "Rust Mark",
+        "canonical": "#7c2d12",
         "tonalRamp": [
-          "oklch(15% 0.023 48)",
-          "oklch(27% 0.03 48)",
-          "oklch(38% 0.036 48)",
-          "oklch(50% 0.036 48)",
-          "oklch(62% 0.036 48)",
-          "oklch(73% 0.036 48)",
-          "oklch(84% 0.03 48)",
-          "oklch(95% 0.023 48)"
+          "oklch(15% 0.072 38)",
+          "oklch(27% 0.098 38)",
+          "oklch(38% 0.116 38)",
+          "oklch(50% 0.116 38)",
+          "oklch(62% 0.116 38)",
+          "oklch(73% 0.116 38)",
+          "oklch(84% 0.096 38)",
+          "oklch(95% 0.072 38)"
         ]
       },
       "term-bg": {
         "role": "neutral",
         "displayName": "Terminal Ground",
+        "canonical": "#120c0a",
+        "tonalRamp": [
+          "oklch(15% 0.007 39)",
+          "oklch(27% 0.009 39)",
+          "oklch(38% 0.011 39)",
+          "oklch(50% 0.011 39)",
+          "oklch(62% 0.011 39)",
+          "oklch(73% 0.011 39)",
+          "oklch(84% 0.009 39)",
+          "oklch(95% 0.007 39)"
+        ]
+      },
+      "term-soft": {
+        "role": "neutral",
+        "displayName": "Terminal Bar",
         "canonical": "#1a1210",
         "tonalRamp": [
           "oklch(15% 0.009 34)",
@@ -150,23 +195,8 @@
           "oklch(50% 0.014 34)",
           "oklch(62% 0.014 34)",
           "oklch(73% 0.014 34)",
-          "oklch(84% 0.012 34)",
+          "oklch(84% 0.011 34)",
           "oklch(95% 0.009 34)"
-        ]
-      },
-      "term-soft": {
-        "role": "neutral",
-        "displayName": "Terminal Bar",
-        "canonical": "#241c19",
-        "tonalRamp": [
-          "oklch(15% 0.009 42)",
-          "oklch(27% 0.012 42)",
-          "oklch(38% 0.014 42)",
-          "oklch(50% 0.014 42)",
-          "oklch(62% 0.014 42)",
-          "oklch(73% 0.014 42)",
-          "oklch(84% 0.011 42)",
-          "oklch(95% 0.009 42)"
         ]
       },
       "term-line": {
@@ -213,24 +243,99 @@
           "oklch(84% 0.018 92)",
           "oklch(95% 0.013 92)"
         ]
+      },
+      "term-amber": {
+        "role": "tertiary",
+        "displayName": "Terminal Amber",
+        "canonical": "#ffc46b",
+        "tonalRamp": [
+          "oklch(15% 0.078 76)",
+          "oklch(27% 0.106 76)",
+          "oklch(38% 0.126 76)",
+          "oklch(50% 0.126 76)",
+          "oklch(62% 0.126 76)",
+          "oklch(73% 0.126 76)",
+          "oklch(84% 0.103 76)",
+          "oklch(95% 0.078 76)"
+        ]
+      },
+      "term-green": {
+        "role": "tertiary",
+        "displayName": "Terminal Green",
+        "canonical": "#a9d18e",
+        "tonalRamp": [
+          "oklch(15% 0.062 133)",
+          "oklch(27% 0.084 133)",
+          "oklch(38% 0.1 133)",
+          "oklch(50% 0.1 133)",
+          "oklch(62% 0.1 133)",
+          "oklch(73% 0.1 133)",
+          "oklch(84% 0.082 133)",
+          "oklch(95% 0.062 133)"
+        ]
+      },
+      "term-blue": {
+        "role": "tertiary",
+        "displayName": "Terminal Blue",
+        "canonical": "#8ecae6",
+        "tonalRamp": [
+          "oklch(15% 0.045 229)",
+          "oklch(27% 0.061 229)",
+          "oklch(38% 0.073 229)",
+          "oklch(50% 0.073 229)",
+          "oklch(62% 0.073 229)",
+          "oklch(73% 0.073 229)",
+          "oklch(84% 0.06 229)",
+          "oklch(95% 0.045 229)"
+        ]
+      },
+      "shadow-rest": {
+        "role": "neutral",
+        "displayName": "Shadow, window at rest",
+        "canonical": "rgb(0 0 0 / 0.6)"
+      },
+      "shadow-front": {
+        "role": "neutral",
+        "displayName": "Shadow, window in front",
+        "canonical": "rgb(0 0 0 / 0.8)"
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "The name on the wallpaper. Up to 6rem on the desktop."
+        "purpose": "The name on the wallpaper, in orange, on the stacked page."
+      },
+      "display-desktop": {
+        "displayName": "Display, desktop",
+        "purpose": "One-off: the fluid size of the name on the desktop. Wraps at 8ch."
+      },
+      "greeting": {
+        "displayName": "Greeting",
+        "purpose": "One-off: the greeting beside the portrait in about.md."
       },
       "headline": {
         "displayName": "Headline",
         "purpose": "The title inside a window."
       },
+      "prose-heading": {
+        "displayName": "Prose heading",
+        "purpose": "One-off: section headings on the privacy page."
+      },
       "title": {
         "displayName": "Title",
         "purpose": "Entry headings such as a job or a project."
       },
+      "brand": {
+        "displayName": "Brand",
+        "purpose": "One-off: the brand in the menu bar."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One-off: the line under the name."
+      },
       "body": {
         "displayName": "Body",
-        "purpose": "Paragraphs, at most 68ch wide."
+        "purpose": "Paragraphs, at most 68ch wide. Also the primary button at weight 600."
       },
       "body-small": {
         "displayName": "Body small",
@@ -238,26 +343,34 @@
       },
       "meta": {
         "displayName": "Meta",
-        "purpose": "Place and date lines, menu bar text."
+        "purpose": "Place and date lines, menu bar text, the Privacy link."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Filenames in title bars; 0.75rem under file icons."
+        "purpose": "Filenames in title bars."
+      },
+      "icon-label": {
+        "displayName": "Icon label",
+        "purpose": "The label under a file icon."
       },
       "terminal": {
         "displayName": "Terminal",
         "purpose": "Terminal output and the boot log."
+      },
+      "prompt-stacked": {
+        "displayName": "Prompt, stacked",
+        "purpose": "One-off: the terminal prompt on the stacked page, 16px so phones do not zoom on focus."
       }
     },
     "shadows": [
       {
         "name": "window-rest",
-        "value": "0 8px 20px -12px rgb(32 21 21 / 0.45)",
+        "value": "0 8px 20px -12px rgb(0 0 0 / 0.6)",
         "purpose": "An open desktop window that is not in front."
       },
       {
         "name": "window-front",
-        "value": "0 22px 44px -16px rgb(32 21 21 / 0.6)",
+        "value": "0 22px 44px -14px rgb(0 0 0 / 0.8)",
         "purpose": "The active desktop window."
       }
     ],
@@ -270,17 +383,22 @@
       {
         "name": "window-open",
         "value": "180ms",
-        "purpose": "Opacity 0 to 1 and scale 0.96 to 1, growing from the icon that opened the window."
+        "purpose": "Opacity 0 to 1 and scale 0.96 to 1, growing from the icon that opened the window. Pointer only; instant from the keyboard."
       },
       {
         "name": "window-close",
         "value": "120ms",
-        "purpose": "Opacity to 0 and scale to 0.97."
+        "purpose": "Opacity to 0 and scale to 0.97. Pointer only; instant from the keyboard."
+      },
+      {
+        "name": "maximise",
+        "value": "0ms",
+        "purpose": "Maximise and restore are instant."
       },
       {
         "name": "press",
         "value": "140ms",
-        "purpose": "Scale to 0.97 on file icons and the button, 0.9 on the close button."
+        "purpose": "Scale to 0.97 on file icons and the button, 0.95 on window buttons."
       },
       {
         "name": "button-colour",
@@ -289,8 +407,13 @@
       },
       {
         "name": "boot-lines",
-        "value": "200ms, 420ms, 640ms, 900ms",
-        "purpose": "Delays at which the four boot log lines appear, each instantly."
+        "value": "400ms, 750ms, 1200ms, 2300ms",
+        "purpose": "Delays at which the four boot log lines appear, each instantly. Each [ ok ] follows its line by 200, 250 and 800ms."
+      },
+      {
+        "name": "boot-cursor",
+        "value": "600ms steps(1) infinite",
+        "purpose": "Blink of the block cursor on the boot line being worked on."
       },
       {
         "name": "boot-out",
@@ -299,7 +422,7 @@
       },
       {
         "name": "start-stagger",
-        "value": "120ms",
+        "value": "70ms",
         "purpose": "On wide desktops the terminal opens first and about.md follows."
       },
       {
@@ -328,38 +451,38 @@
       "name": "Window",
       "kind": "card",
       "refersTo": "window",
-      "description": "The main container: a cream file window with a mono filename in the title bar. Shown in its front state on the desktop.",
-      "html": "<section class=\"ds-win\"><header class=\"ds-win-bar\"><span>example.md</span><button class=\"ds-win-close\" type=\"button\" aria-label=\"Close example.md\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M2.5 2.5l7 7M9.5 2.5l-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg></button></header><div class=\"ds-win-body\"><h2>Window title</h2><article class=\"ds-entry\"><h3>Entry title</h3><p class=\"ds-meta\">Place · 2025 – now</p><p>A short description of the entry.</p></article><article class=\"ds-entry\"><h3>Second entry</h3><p class=\"ds-meta\">Place · 2024</p></article></div></section>",
-      "css": ".ds-win { max-width: 30rem; background: var(--canvas); color: var(--ink); border: 1px solid var(--ink); border-radius: var(--radius); overflow: hidden; font: 1.0625rem/1.6 var(--sans); box-shadow: 0 22px 44px -16px rgb(32 21 21 / 0.6); } .ds-win-bar { display: flex; align-items: center; justify-content: space-between; min-height: 2.25rem; padding-left: 0.875rem; background: var(--canvas-soft); border-bottom: 1px solid var(--hairline); color: var(--ink); font: 500 0.8125rem/1 var(--mono); cursor: grab; } .ds-win-bar .ds-win-close:hover { color: var(--link); } .ds-win-body { padding: 1.5rem; } .ds-win h2 { margin: 0 0 1.25rem; font: 700 1.75rem/1.1 var(--display); letter-spacing: -0.02em; } .ds-entry + .ds-entry { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); } .ds-entry h3 { margin: 0; font: 650 1.125rem/1.3 var(--display); } .ds-entry p { margin: 0.375rem 0 0; font-size: 0.9375rem; } .ds-entry .ds-meta { margin: 0.125rem 0 0; color: var(--body); font-size: 0.875rem; } .ds-win-close { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 0; border-radius: var(--radius-sm); background: none; color: inherit; cursor: pointer; transition: scale 140ms var(--ease-out); } .ds-win-close:active { scale: 0.9; } .ds-win-close:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }"
+      "description": "The main container: a coffee file window with a mono filename in the title bar. Shown in its front state on the desktop.",
+      "html": "<section class=\"ds-win\"><header class=\"ds-win-bar\"><span>example.md</span><button class=\"ds-win-btn\" type=\"button\" aria-label=\"Maximise example.md\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"2.5\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg></button><button class=\"ds-win-btn\" type=\"button\" aria-label=\"Close example.md\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M2.5 2.5l7 7M9.5 2.5l-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg></button></header><div class=\"ds-win-body\"><h2>Window title</h2><article class=\"ds-entry\"><h3>Entry title</h3><p class=\"ds-meta\"><b>Organisation</b> · Place · 2025 – <span class=\"ds-now\">now</span></p><p>A short description with a <mark>key term</mark> and a <a href=\"#\">link</a>.</p></article><article class=\"ds-entry\"><h3>Second entry</h3><p class=\"ds-meta\">Place · 2024</p></article></div></section>",
+      "css": ".ds-win { max-width: 30rem; background: var(--canvas); color: var(--ink); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; font: 1.0625rem/1.6 var(--sans); box-shadow: 0 22px 44px -14px rgb(0 0 0 / 0.8); } .ds-win-bar { display: flex; align-items: center; justify-content: space-between; min-height: 2.25rem; padding-left: 0.875rem; background: var(--canvas-soft); border-bottom: 1px solid var(--hairline); color: var(--ink); font: 500 0.8125rem/1 var(--mono); cursor: grab; } .ds-win-bar span { margin-right: auto; } .ds-win-bar .ds-win-btn:hover { color: var(--link); } .ds-win-body { padding: 1.5rem; } .ds-win h2 { margin: 0 0 1.25rem; font: 700 1.75rem/1.1 var(--display); letter-spacing: -0.02em; } .ds-entry + .ds-entry { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline); } .ds-entry h3 { margin: 0; font: 650 1.125rem/1.3 var(--display); } .ds-entry p { margin: 0.375rem 0 0; font-size: 0.9375rem; } .ds-entry .ds-meta { margin: 0.125rem 0 0; color: var(--body); font-size: 0.875rem; } .ds-meta b { color: var(--ink); font-weight: 600; } .ds-now { color: var(--link); font-weight: 600; } .ds-win mark { padding: 0.05em 0.15em; margin: 0 -0.15em; border-radius: var(--radius-sm); background: var(--selection); color: var(--ink); } .ds-win a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.2em; } .ds-win a:hover { color: var(--ink); } .ds-win a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; } .ds-win-btn { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 0; border-radius: var(--radius-sm); background: none; color: var(--ink); cursor: pointer; transition: scale 140ms var(--ease-out); } .ds-win-btn:active { scale: 0.95; } .ds-win-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: -4px; }"
     },
     {
       "name": "Terminal Window",
       "kind": "custom",
       "refersTo": "window-terminal",
-      "description": "The one dark window: mono type, orange prompt and block caret.",
-      "html": "<section class=\"ds-term\"><header class=\"ds-term-bar\"><span>terminal</span><button class=\"ds-win-close\" type=\"button\" aria-label=\"Close terminal\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M2.5 2.5l7 7M9.5 2.5l-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg></button></header><div class=\"ds-term-body\"><div class=\"ds-term-cmd\">guest@torres.swiss:~$ ls</div><div>about.md  work.md  education.md  projects  certificates.md</div><div class=\"ds-term-cmd\">guest@torres.swiss:~$ nope</div><div class=\"ds-term-err\">Command \"nope\" not found. Type \"help\" for a list.</div><form class=\"ds-term-line\" onsubmit=\"return false\"><label for=\"ds-term-in\">guest@torres.swiss:~$</label><input id=\"ds-term-in\" type=\"text\" autocomplete=\"off\" spellcheck=\"false\"></form></div></section>",
-      "css": ".ds-term { max-width: 32rem; background: var(--term-bg); color: var(--term-ink); border: 1px solid var(--ink); border-radius: var(--radius); overflow: hidden; font: 0.875rem/1.55 var(--mono); box-shadow: 0 22px 44px -16px rgb(32 21 21 / 0.6); } .ds-term-bar { display: flex; align-items: center; justify-content: space-between; min-height: 2.25rem; padding-left: 0.875rem; background: var(--term-soft); border-bottom: 1px solid var(--term-line); color: var(--term-ink); font: 500 0.8125rem/1 var(--mono); } .ds-term-bar .ds-win-close:hover { color: var(--orange); } .ds-term-bar .ds-win-close:focus-visible { outline-color: var(--orange); } .ds-term-body { padding: 1rem; cursor: text; } .ds-term-body > div { white-space: pre-wrap; overflow-wrap: anywhere; } .ds-term-cmd { margin-top: 0.75rem; color: var(--term-mute); } .ds-term-cmd:first-child { margin-top: 0; } .ds-term-err { color: var(--orange); } .ds-term-line { display: flex; gap: 0.5rem; margin-top: 0.75rem; } .ds-term-line label { flex: none; color: var(--orange); } .ds-term-line input { flex: 1; min-width: 0; padding: 0; border: 0; outline: 0; background: none; color: inherit; font: inherit; caret-color: var(--orange); caret-shape: block; } .ds-term ::selection { background: var(--orange); color: var(--ink); } .ds-win-close { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 0; border-radius: var(--radius-sm); background: none; color: inherit; cursor: pointer; transition: scale 140ms var(--ease-out); } .ds-win-close:active { scale: 0.9; } .ds-win-close:focus-visible { outline: 2px solid currentColor; outline-offset: -4px; }"
+      "description": "The darkest window: mono type, orange prompt and block caret, one colour per meaning in the output.",
+      "html": "<section class=\"ds-term\"><header class=\"ds-term-bar\"><span>terminal</span><button class=\"ds-win-btn\" type=\"button\" aria-label=\"Maximise terminal\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"2.5\" width=\"7\" height=\"7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/></svg></button><button class=\"ds-win-btn\" type=\"button\" aria-label=\"Close terminal\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M2.5 2.5l7 7M9.5 2.5l-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg></button></header><div class=\"ds-term-body\"><div class=\"ds-term-cmd\">guest@os:~$ cat work.md</div><div class=\"ds-term-h3\">Entry title</div><div><span class=\"ds-term-org\">Organisation</span> <span class=\"ds-term-mute\">· 2025 –</span> <span class=\"ds-term-now\">now</span></div><div>Built a <span class=\"ds-term-hl\">key term</span>.</div><div class=\"ds-term-cmd\">guest@os:~$ nope</div><div class=\"ds-term-err\">Command \"nope\" not found. Type \"help\" for a list.</div><form class=\"ds-term-line\" onsubmit=\"return false\"><label for=\"ds-term-in\">guest@os:~$</label><input id=\"ds-term-in\" type=\"text\" autocomplete=\"off\" spellcheck=\"false\"></form></div></section>",
+      "css": ".ds-term { max-width: 32rem; background: var(--term-bg); color: var(--term-ink); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; font: 0.875rem/1.55 var(--mono); box-shadow: 0 22px 44px -14px rgb(0 0 0 / 0.8); } .ds-term-bar { display: flex; align-items: center; justify-content: space-between; min-height: 2.25rem; padding-left: 0.875rem; background: var(--term-soft); border-bottom: 1px solid var(--term-line); color: var(--term-ink); font: 500 0.8125rem/1 var(--mono); } .ds-term-bar span { margin-right: auto; } .ds-term-bar .ds-win-btn:hover { color: var(--orange); } .ds-term-body { padding: 1rem; cursor: text; } .ds-term-body > div { white-space: pre-wrap; overflow-wrap: anywhere; } .ds-term-cmd { margin-top: 0.75rem; color: var(--term-mute); } .ds-term-cmd:first-child { margin-top: 0; } .ds-term-h3 { margin-top: 0.75rem; color: var(--orange); font-weight: 600; } .ds-term-org { color: var(--term-blue); } .ds-term-hl { color: var(--term-amber); } .ds-term-now { color: var(--term-green); } .ds-term-mute { color: var(--term-mute); } .ds-term-err { color: var(--orange); } .ds-term-line { display: flex; gap: 0.5rem; margin-top: 0.75rem; } .ds-term-line label { flex: none; color: var(--orange); } .ds-term-line input { flex: 1; min-width: 0; padding: 0; border: 0; outline: 0; background: none; color: inherit; font: inherit; caret-color: var(--orange); caret-shape: block; } .ds-term ::selection { background: var(--orange); color: var(--on-orange); } .ds-win-btn { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; padding: 0; border: 0; border-radius: var(--radius-sm); background: none; color: var(--ink); cursor: pointer; transition: scale 140ms var(--ease-out); } .ds-win-btn:active { scale: 0.95; } .ds-win-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: -4px; } .ds-term .ds-win-btn { color: var(--term-ink); } .ds-term .ds-win-btn:focus-visible { outline-color: var(--orange); }"
     },
     {
       "name": "File Icons",
       "kind": "nav",
       "refersTo": "file-icon",
-      "description": "Desktop icons on the orange ground. The label inverts on hover and stays inverted while the file is open.",
-      "html": "<nav class=\"ds-files\" aria-label=\"Files\"><a href=\"#\" aria-current=\"true\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M9 4h15l8 8v24H9z\" fill=\"#fffefb\" stroke=\"#201515\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M24 4v8h8M14 20h12M14 25h12M14 30h7\" fill=\"none\" stroke=\"#201515\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>about.md</span></a><a href=\"#\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M9 4h15l8 8v24H9z\" fill=\"#fffefb\" stroke=\"#201515\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M24 4v8h8M14 20h12M14 25h12M14 30h7\" fill=\"none\" stroke=\"#201515\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>work.md</span></a><a href=\"#\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M4 9h11l4 4h17v21H4z\" fill=\"#fffefb\" stroke=\"#201515\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M4 17h32\" fill=\"none\" stroke=\"#201515\" stroke-width=\"1.5\"/></svg><span>projects</span></a><a href=\"#\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><rect x=\"4\" y=\"7\" width=\"32\" height=\"26\" rx=\"3\" fill=\"#201515\" stroke=\"#201515\" stroke-width=\"1.5\"/><path d=\"M11 16l5 4-5 4M20 25h8\" fill=\"none\" stroke=\"#fffefb\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>terminal</span></a></nav>",
-      "css": ".ds-files { display: grid; grid-template-columns: repeat(2, 8.25rem); gap: 0.25rem; width: max-content; padding: 1.25rem 1rem; background: var(--orange); } .ds-files a { display: grid; justify-items: center; gap: 0.25rem; padding: 0.5rem 0.25rem; border-radius: var(--radius-sm); color: var(--ink); font: 500 0.75rem/1.3 var(--mono); text-decoration: none; transition: scale 140ms var(--ease-out); } .ds-files span { padding: 0.0625rem 0.375rem; border-radius: 4px; white-space: nowrap; } .ds-files a:active { scale: 0.97; } .ds-files a[aria-current] span, .ds-files a:hover span { background: var(--ink); color: var(--canvas); } .ds-files a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }"
+      "description": "Desktop icons on the dark wallpaper. The front window's label is orange, other open files get a quiet soft label, and hover turns the label cream.",
+      "html": "<nav class=\"ds-files\" aria-label=\"Files\"><a href=\"#\" aria-current=\"true\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M9 4h15l8 8v24H9z\" fill=\"#2f2622\" stroke=\"#fffefb\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M24 4v8h8M14 20h12M14 25h12M14 30h7\" fill=\"none\" stroke=\"#fffefb\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>about.md</span></a><a href=\"#\" class=\"ds-is-open\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M9 4h15l8 8v24H9z\" fill=\"#2f2622\" stroke=\"#fffefb\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M24 4v8h8M14 20h12M14 25h12M14 30h7\" fill=\"none\" stroke=\"#fffefb\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>work.md</span></a><a href=\"#\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><path d=\"M4 9h11l4 4h17v21H4z\" fill=\"#2f2622\" stroke=\"#fffefb\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M4 17h32\" fill=\"none\" stroke=\"#fffefb\" stroke-width=\"1.5\"/></svg><span>projects</span></a><a href=\"#\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" aria-hidden=\"true\"><rect x=\"4\" y=\"7\" width=\"32\" height=\"26\" rx=\"3\" fill=\"#120c0a\" stroke=\"#fffefb\" stroke-width=\"1.5\"/><path d=\"M11 16l5 4-5 4M20 25h8\" fill=\"none\" stroke=\"#ff4f00\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>terminal</span></a></nav>",
+      "css": ".ds-files { display: grid; grid-template-columns: repeat(2, 8.25rem); gap: 0.25rem; width: max-content; padding: 1.25rem 1rem; background: var(--ground); } .ds-files a { display: grid; justify-items: center; gap: 0.25rem; padding: 0.5rem 0.25rem; border-radius: var(--radius-sm); color: var(--ink); font: 500 0.75rem/1.3 var(--mono); text-decoration: none; transition: scale 140ms var(--ease-out); } .ds-files span { padding: 0.0625rem 0.375rem; border-radius: var(--radius-sm); white-space: nowrap; } .ds-files a:active { scale: 0.97; } .ds-files a.ds-is-open span { background: var(--canvas-soft); } .ds-files a[aria-current] span { background: var(--orange); color: var(--on-orange); } .ds-files a:hover span { background: var(--ink); color: var(--on-orange); } .ds-files a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }"
     },
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The one call to action: orange fill with ink text, inverting to ink on hover.",
-      "html": "<a class=\"ds-btn\" href=\"#\">Connect on LinkedIn</a>",
-      "css": ".ds-btn { display: inline-block; padding: 0.75rem 1.25rem; border-radius: var(--radius); background: var(--orange); color: var(--ink); font: 600 1.0625rem/1.6 var(--sans); text-decoration: none; transition: scale 140ms var(--ease-out), background-color 160ms ease, color 160ms ease; } .ds-btn:hover { background: var(--ink); color: var(--canvas); } .ds-btn:active { scale: 0.97; } .ds-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }"
+      "description": "The one call to action: orange fill with dark text. On hover the fill turns cream and the text stays dark.",
+      "html": "<div class=\"ds-btn-wrap\"><a class=\"ds-btn\" href=\"#\">Connect on LinkedIn</a></div>",
+      "css": ".ds-btn-wrap { padding: 1.5rem; background: var(--canvas); } .ds-btn { display: inline-block; padding: 0.75rem 1.25rem; border-radius: var(--radius); background: var(--orange); color: var(--on-orange); font: 600 1.0625rem/1.6 var(--sans); text-decoration: none; transition: scale 140ms var(--ease-out), background-color 160ms ease, color 160ms ease; } .ds-btn:hover { background: var(--ink); color: var(--on-orange); } .ds-btn:active { scale: 0.97; } .ds-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }"
     },
     {
       "name": "Text Link",
       "kind": "custom",
-      "description": "Links inside a window: rust on cream with a thin underline, ink on hover.",
+      "description": "Links inside a window: Link Orange with a thin underline, cream on hover.",
       "html": "<p class=\"ds-linkrow\"><a href=\"#\">Mail</a> <a href=\"#\">GitHub</a> <a href=\"#\">Blog</a></p>",
       "css": ".ds-linkrow { display: flex; gap: 1.25rem; margin: 0; padding: 1rem 1.5rem; background: var(--canvas); font: 0.9375rem/1.6 var(--sans); } .ds-linkrow a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.2em; } .ds-linkrow a:hover { color: var(--ink); } .ds-linkrow a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; }"
     },
@@ -367,16 +490,16 @@
       "name": "Menu Bar",
       "kind": "nav",
       "refersTo": "menu-bar",
-      "description": "The 2.5rem cream bar on top: brand left, three links and the clock right.",
-      "html": "<header class=\"ds-bar\"><span class=\"ds-brand\">TORRES OS</span><nav aria-label=\"Contact\"><a href=\"#\">LinkedIn</a><a href=\"#\">GitHub</a><a href=\"#\">Mail</a></nav><time>Wed 11 Nov 20:40</time></header>",
-      "css": ".ds-bar { display: flex; align-items: center; gap: 1.25rem; height: var(--bar); padding: 0 var(--gutter); background: var(--canvas); border-bottom: 1px solid var(--ink); color: var(--ink); font: 0.875rem/1.6 var(--sans); } .ds-brand { margin-right: auto; white-space: nowrap; font: 700 1rem/1 var(--display); letter-spacing: 0.01em; } .ds-bar nav { display: flex; gap: 1.25rem; } .ds-bar a { display: inline-block; padding: 0.5rem 0; color: var(--ink); font-weight: 600; text-decoration: none; } .ds-bar a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: var(--orange); } .ds-bar a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; } .ds-bar time { color: var(--body); font-variant-numeric: tabular-nums; white-space: nowrap; }"
+      "description": "The 2.5rem coffee bar on top: brand left, three links and the clock right.",
+      "html": "<header class=\"ds-bar\"><span class=\"ds-brand\">TORRES OS</span><nav aria-label=\"Contact\"><a href=\"#\">LinkedIn</a><a href=\"#\">GitHub</a><a href=\"#\">Mail</a></nav><time>Wed 11 Nov 22:46</time></header>",
+      "css": ".ds-bar { display: flex; align-items: center; gap: 1.25rem; height: var(--bar); padding: 0 var(--gutter); background: var(--canvas); border-bottom: 1px solid var(--hairline); color: var(--ink); font: 0.875rem/1.6 var(--sans); } .ds-brand { margin-right: auto; white-space: nowrap; font: 700 1rem/1 var(--display); letter-spacing: 0.01em; } .ds-bar nav { display: flex; gap: 1.25rem; } .ds-bar a { display: inline-block; padding: 0.5rem 0; color: var(--ink); font-weight: 600; text-decoration: none; } .ds-bar a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: var(--orange); } .ds-bar a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; } .ds-bar time { color: var(--body); font-variant-numeric: tabular-nums; white-space: nowrap; }"
     }
   ],
   "narrative": {
-    "northStar": "The Orange Desktop",
-    "overview": "The site is a small operating system, not a page. The wallpaper is flat electric orange. The content sits in cream windows with a thin dark outline, and each window is a file with its name in the title bar. One window, the terminal, is dark. On small or touch screens, and without JavaScript, the same windows stack into one readable column.\n\nThe system shares its tokens with a sister site (cream, coffee ink, orange, 12px corners, Bricolage Grotesque headings, system sans body). The difference is that orange is the ground here, not an accent. Everything else is quiet: flat fills, 1px lines, two soft shadows, and very little motion.",
+    "northStar": "The Dark Desktop",
+    "overview": "The site is a small operating system, not a page. The wallpaper is flat dark coffee. The content sits in windows of a slightly lighter coffee with a thin outline, and each window is a file with its name in the title bar. Text is cream. Orange is the single accent. The terminal is the darkest window. On small or touch screens, and without JavaScript, the same windows stack into one readable column.\n\nThe system shares its orange, its 12px corners and its typefaces (Bricolage Grotesque headings, system sans body) with the owner's other sites. Everything else is quiet: flat fills, 1px lines, two black shadows, and very little motion.",
     "keyCharacteristics": [
-      "Flat orange ground, cream windows, one dark terminal.",
+      "Dark coffee ground, lighter coffee windows, cream text, one orange accent.",
       "1px lines and 12px corners. No gradients, no pills.",
       "Three type voices: Bricolage Grotesque for headings, system sans for reading, mono for filenames and the terminal.",
       "Two layouts from one HTML source: a desktop with draggable windows, and a stacked page.",
@@ -384,23 +507,28 @@
     ],
     "rules": [
       {
-        "name": "The Orange Ground Rule",
-        "body": "Orange is the wallpaper. On cream it appears only as the one button fill and as an underline colour.",
+        "name": "The One Accent Rule",
+        "body": "Orange is the only accent. It marks one thing of each kind: the name, the one button, the front window's icon, the prompt. Everything else is coffee, cream or sand.",
         "section": "colors"
       },
       {
-        "name": "The No Orange Text On Cream Rule",
-        "body": "Orange on cream is 3.3:1, too low for text. Text on cream uses Rust Link or Coffee Ink. Orange text is allowed on the terminal ground (5.6:1). Text on orange is always Coffee Ink (5.4:1).",
+        "name": "The Two Oranges Rule",
+        "body": "Electric Orange is for fills and for text on the wallpaper and in the terminal (5.6:1 and 5.9:1). Text inside a window uses Link Orange, because Electric Orange on Soft Canvas is 4.48:1, just under the 4.5:1 needed for text.",
         "section": "colors"
       },
       {
-        "name": "The One Dark Window Rule",
-        "body": "Only the terminal and the boot screen use the terminal colours. Everything else is cream.",
+        "name": "The Dark On Orange Rule",
+        "body": "Text on an orange or cream fill is always Coffee On Orange (5.4:1 on orange). Cream on orange is 3.3:1 and is never used for text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Darkest Window Rule",
+        "body": "Only the terminal and the boot screen use Terminal Ground, and only they use amber, green and blue.",
         "section": "colors"
       },
       {
         "name": "The Three Voices Rule",
-        "body": "Bricolage Grotesque is for the name, window titles, entry titles and the \"TORRES OS\" brand. Mono is for filenames, the terminal and the boot log. Everything else is system sans.",
+        "body": "Bricolage Grotesque is for the name, window titles, entry titles and the \"TORRES OS\" brand. Mono is for filenames, the terminal, the boot log and inline code. Everything else is system sans.",
         "section": "typography"
       },
       {
@@ -410,7 +538,7 @@
       },
       {
         "name": "The Front Window Rule",
-        "body": "The active window is shown in three ways at once: the deeper shadow, a tinted title bar (Soft Canvas, or Terminal Bar), and a title in full ink. Windows behind it have a title bar in their body colour and a muted title.",
+        "body": "The active window is shown in five ways at once: the deeper shadow, a lighter outline (Stone), a tinted title bar (Soft Canvas, or Terminal Bar), a title in Cream Ink, and an orange label on its file icon. Windows behind it have a Hairline outline, a title bar in their body colour, a Sand title, and a Soft Canvas label on their icon.",
         "section": "elevation"
       },
       {
@@ -420,20 +548,23 @@
       }
     ],
     "dos": [
-      "Do keep orange as the ground and put content in cream windows.",
-      "Do put Coffee Ink on orange for all text and icons on the wallpaper.",
+      "Do keep the wallpaper dark coffee and put content in lighter coffee windows with cream text.",
+      "Do keep orange as the single accent, and use Link Orange for text inside a window.",
+      "Do put Coffee On Orange text on every orange or cream fill.",
       "Do give every new piece of content its own window with a filename, a file icon and an entry in the terminal, read from the same HTML.",
-      "Do use 1px lines: ink for outlines, Hairline for dividers inside a window.",
+      "Do use 1px lines: Hairline for outlines and dividers, Stone for the front window.",
       "Do keep hover styles inside `(hover: hover) and (pointer: fine)`.",
       "Do make sure new content also works on the stacked page and without JavaScript.",
-      "Do keep window motion at 180ms to open and 120ms to close, with a reduced-motion version that only fades."
+      "Do keep window motion at 180ms to open and 120ms to close, instant from the keyboard, with a reduced-motion version that only fades."
     ],
     "donts": [
-      "Don't use orange for text on cream. Use Rust Link.",
-      "Don't add a second dark surface. The terminal and the boot screen are the only ones.",
+      "Don't use Electric Orange for text inside a window. Use Link Orange.",
+      "Don't put cream text on orange.",
+      "Don't add a second accent colour. Amber, green and blue belong to the terminal only.",
+      "Don't add a light surface or a light theme. Cream is for text, strokes and hover fills.",
       "Don't use gradients, pills or fully round corners.",
       "Don't add shadows on the stacked page, or to buttons and the menu bar.",
-      "Don't use mono type outside filenames, the terminal and the boot log.",
+      "Don't use mono type outside filenames, the terminal, the boot log and inline code.",
       "Don't add scroll animations, looping animations or a second intro. The boot sequence is the only staged motion.",
       "Don't put cards inside windows. Separate entries with a Hairline rule."
     ]

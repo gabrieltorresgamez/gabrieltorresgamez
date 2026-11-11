@@ -1,21 +1,28 @@
 ---
 name: TORRES OS
-description: A personal portfolio presented as a small desktop in the browser.
+description: A personal portfolio presented as a small dark desktop in the browser.
 colors:
   orange: "#ff4f00"
-  link: "#c2410c"
-  canvas: "#fffefb"
-  canvas-soft: "#f8f4f0"
-  ink: "#201515"
-  body: "#605d52"
-  hairline: "#c5c0b1"
-  border: "#939084"
-  selection: "#ffe3d5"
-  term-bg: "#1a1210"
-  term-soft: "#241c19"
+  link: "#ff6a26"
+  on-orange: "#201515"
+  ground: "#1a1210"
+  canvas: "#241c19"
+  canvas-soft: "#2f2622"
+  ink: "#fffefb"
+  body: "#c5c0b1"
+  hairline: "#4a4039"
+  border: "#807d72"
+  selection: "#7c2d12"
+  term-bg: "#120c0a"
+  term-soft: "#1a1210"
   term-line: "#3a332d"
   term-ink: "#fffefb"
   term-mute: "#c5c0b1"
+  term-amber: "#ffc46b"
+  term-green: "#a9d18e"
+  term-blue: "#8ecae6"
+  shadow-rest: "rgb(0 0 0 / 0.6)"
+  shadow-front: "rgb(0 0 0 / 0.8)"
 typography:
   display:
     fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
@@ -23,17 +30,46 @@ typography:
     fontWeight: 700
     lineHeight: 0.92
     letterSpacing: "-0.03em"
+  display-desktop:
+    fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
+    fontSize: "clamp(3rem, min(6.6vw, 10vh), 6rem)"
+    fontWeight: 700
+    lineHeight: 0.92
+    letterSpacing: "-0.03em"
+  greeting:
+    fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
+    fontSize: "2rem"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "-0.02em"
   headline:
     fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
     fontSize: "1.75rem"
     fontWeight: 700
     lineHeight: 1.1
     letterSpacing: "-0.02em"
+  prose-heading:
+    fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "0em"
   title:
     fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 650
     lineHeight: 1.3
+  brand:
+    fontFamily: "'Bricolage Grotesque Variable', system-ui, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "0.01em"
+  lede:
+    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 500
+    lineHeight: 1.6
   body:
     fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
     fontSize: "1.0625rem"
@@ -54,12 +90,23 @@ typography:
     fontSize: "0.8125rem"
     fontWeight: 500
     lineHeight: 1
+  icon-label:
+    fontFamily: "ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+    fontSize: "0.75rem"
+    fontWeight: 500
+    lineHeight: 1.3
   terminal:
     fontFamily: "ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
     fontSize: "0.875rem"
     fontWeight: 400
     lineHeight: 1.55
+  prompt-stacked:
+    fontFamily: "ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.55
 rounded:
+  focus: "2px"
   sm: "6px"
   md: "12px"
 spacing:
@@ -96,37 +143,50 @@ components:
     height: "2.25rem"
   button-primary:
     backgroundColor: "{colors.orange}"
-    textColor: "{colors.ink}"
+    textColor: "{colors.on-orange}"
     rounded: "{rounded.md}"
     padding: "0.75rem 1.25rem"
   button-primary-hover:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.canvas}"
+    textColor: "{colors.on-orange}"
   file-icon:
     textColor: "{colors.ink}"
+    typography: "{typography.icon-label}"
     rounded: "{rounded.sm}"
     padding: "0.5rem 0.25rem"
   file-icon-open:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+  file-icon-current:
+    backgroundColor: "{colors.orange}"
+    textColor: "{colors.on-orange}"
+  file-icon-hover:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.canvas}"
-  window-close:
+    textColor: "{colors.on-orange}"
+  window-button:
     textColor: "{colors.ink}"
     rounded: "{rounded.sm}"
     size: "2.25rem"
+  window-button-hover:
+    textColor: "{colors.link}"
+  mark:
+    backgroundColor: "{colors.selection}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.sm}"
 ---
 
 # Design System: TORRES OS
 
 ## Overview
 
-**Creative North Star: "The Orange Desktop"**
+**Creative North Star: "The Dark Desktop"**
 
-The site is a small operating system, not a page. The wallpaper is flat electric orange. The content sits in cream windows with a thin dark outline, and each window is a file with its name in the title bar. One window, the terminal, is dark. On small or touch screens, and without JavaScript, the same windows stack into one readable column.
+The site is a small operating system, not a page. The wallpaper is flat dark coffee. The content sits in windows of a slightly lighter coffee with a thin outline, and each window is a file with its name in the title bar. Text is cream. Orange is the single accent. The terminal is the darkest window. On small or touch screens, and without JavaScript, the same windows stack into one readable column.
 
-The system shares its tokens with a sister site (cream, coffee ink, orange, 12px corners, Bricolage Grotesque headings, system sans body). The difference is that orange is the ground here, not an accent. Everything else is quiet: flat fills, 1px lines, two soft shadows, and very little motion.
+The system shares its orange, its 12px corners and its typefaces (Bricolage Grotesque headings, system sans body) with the owner's other sites. Everything else is quiet: flat fills, 1px lines, two black shadows, and very little motion.
 
 **Key Characteristics:**
-- Flat orange ground, cream windows, one dark terminal.
+- Dark coffee ground, lighter coffee windows, cream text, one orange accent.
 - 1px lines and 12px corners. No gradients, no pills.
 - Three type voices: Bricolage Grotesque for headings, system sans for reading, mono for filenames and the terminal.
 - Two layouts from one HTML source: a desktop with draggable windows, and a stacked page.
@@ -134,44 +194,48 @@ The system shares its tokens with a sister site (cream, coffee ink, orange, 12px
 
 ## Colors
 
-A warm set: one loud orange, a cream and coffee pair for reading, and a darker coffee set for the terminal.
+A warm dark set: three steps of coffee for surfaces, cream and sand for text, and one loud orange. The page declares `color-scheme: dark`; there is no light theme.
 
 ### Primary
-- **Electric Orange** (`orange`): the page ground. Also the primary button fill, the caret, the terminal prompt, terminal errors, the ASCII logo, and the focus ring inside the terminal.
+- **Electric Orange** (`orange`): the name on the wallpaper, the primary button fill, the label of the front window's icon, the caret, the terminal prompt, terminal entry titles, errors and ASCII logo, the boot log marks and cursor, the hover underline in the menu bar, and the focus ring inside the terminal.
 
 ### Secondary
-- **Rust Link** (`link`): text links on cream, and the hover colour of the close button. It is the readable form of the orange (5.1:1 on cream).
+- **Link Orange** (`link`): text links inside windows, the word "now" on a current role, and the hover colour of window buttons. It is a slightly lighter orange that stays readable on both window surfaces (5.9:1 on Coffee Canvas, 5.2:1 on Soft Canvas).
 
 ### Neutral
-- **Cream Canvas** (`canvas`): window bodies, the menu bar, icon fills, and the title bar of a window that is not in front.
-- **Soft Canvas** (`canvas-soft`): the title bar of a light window.
-- **Coffee Ink** (`ink`): text, the window outline, the menu bar rule, icon strokes, and the focus ring.
-- **Warm Grey** (`body`): secondary text such as dates, places, the clock, and title bar names.
-- **Hairline** (`hairline`): dividers inside a window.
-- **Stone** (`border`): list markers and scrollbar thumbs only. Despite the name it is not used for borders.
-- **Peach Selection** (`selection`): text selection on light surfaces.
+- **Coffee Ground** (`ground`): the wallpaper and the page background.
+- **Coffee Canvas** (`canvas`): window bodies, the menu bar, and the title bar of a window that is not in front.
+- **Soft Canvas** (`canvas-soft`): the title bar of the front window, the label of an open file's icon, inline code, and the fill of the file icons.
+- **Cream Ink** (`ink`): text, icon strokes, the focus ring, and the hover fill of the button and icon labels.
+- **Sand** (`body`): secondary text such as dates, places, the clock and title bar names.
+- **Hairline** (`hairline`): window outlines, the menu bar rule, dividers inside a window, and the page scrollbar.
+- **Stone** (`border`): the outline of the front window, list markers, and scrollbar thumbs inside windows.
+- **Coffee On Orange** (`on-orange`): text on an orange fill and on a cream fill. It is used nowhere else.
+- **Rust Mark** (`selection`): the marker behind key terms, and text selection. One value, two uses.
+- **Shadow** (`shadow-rest`, `shadow-front`): pure black at 60% and 80%. Used only in the two window shadows.
 
 ### Terminal
-- **Terminal Ground** (`term-bg`): the terminal body, the boot screen, and the terminal title bar when not in front.
-- **Terminal Bar** (`term-soft`): the terminal title bar.
+- **Terminal Ground** (`term-bg`): the terminal body, the boot screen, the terminal title bar when not in front, and the fill of the terminal icon. It is the darkest surface.
+- **Terminal Bar** (`term-soft`): the terminal title bar when in front. Same value as Coffee Ground.
 - **Terminal Rule** (`term-line`): the rule under the terminal title bar and its scrollbar.
-- **Terminal Ink** (`term-ink`): terminal output. Same value as Cream Canvas.
-- **Terminal Mute** (`term-mute`): echoed commands and the title bar name. Same value as Hairline.
-
-- **Terminal Amber** (`#ffc46b`): key terms and command names in terminal output.
-- **Terminal Green** (`#a9d18e`): the word "now" on current roles.
-- **Terminal Blue** (`#8ecae6`): organisation names and URLs.
+- **Terminal Ink** (`term-ink`) and **Terminal Mute** (`term-mute`): output and echoed commands. Same values as Cream Ink and Sand.
+- **Terminal Amber** (`term-amber`): key terms and command names in output.
+- **Terminal Green** (`term-green`): the word "now" on current roles.
+- **Terminal Blue** (`term-blue`): organisation names and URLs.
 
 ### Highlights
-- In the cream windows, key terms carry a marker: Selection Tint (`#ffe3d5`) behind Coffee Ink. Organisation names are Coffee Ink at weight 600, and "now" on a current role is Rust Link at 600.
-- In the terminal, the same markup maps to the three terminal colours above, with entry titles in orange. Each colour has one meaning; none is decoration.
+- In the windows, key terms carry a marker: Rust Mark behind Cream Ink (9.3:1). Organisation names are Cream Ink at weight 600, and "now" on a current role is Link Orange at 600.
+- In the terminal, the same markup maps to amber, blue and green, with entry titles in orange. Each colour has one meaning; none is decoration.
+- When marked text is selected, the selection turns orange with Coffee On Orange text, so it stays visible on the marker.
 
 ### Named Rules
-**The Orange Ground Rule.** Orange is the wallpaper. On cream it appears only as the one button fill and as an underline colour.
+**The One Accent Rule.** Orange is the only accent. It marks one thing of each kind: the name, the one button, the front window's icon, the prompt. Everything else is coffee, cream or sand.
 
-**The No Orange Text On Cream Rule.** Orange on cream is 3.3:1, too low for text. Text on cream uses Rust Link or Coffee Ink. Orange text is allowed on the terminal ground (5.6:1). Text on orange is always Coffee Ink (5.4:1).
+**The Two Oranges Rule.** Electric Orange is for fills and for text on the wallpaper and in the terminal (5.6:1 and 5.9:1). Text inside a window uses Link Orange, because Electric Orange on Soft Canvas is 4.48:1, just under the 4.5:1 needed for text.
 
-**The One Dark Window Rule.** Only the terminal and the boot screen use the terminal colours, including amber, green and blue. Everything else is cream.
+**The Dark On Orange Rule.** Text on an orange or cream fill is always Coffee On Orange (5.4:1 on orange). Cream on orange is 3.3:1 and is never used for text.
+
+**The Darkest Window Rule.** Only the terminal and the boot screen use Terminal Ground, and only they use amber, green and blue.
 
 ## Typography
 
@@ -182,17 +246,24 @@ A warm set: one loud orange, a cream and coffee pair for reading, and a darker c
 **Character:** A friendly, slightly quirky grotesque for names and titles, and the visitor's own system fonts for everything else. The mono voice marks what belongs to the machine.
 
 ### Hierarchy
-- **Display** (700, `clamp(2.75rem, 12vw, 5rem)`, 0.92, -0.03em): the name on the wallpaper. On the desktop it grows with the viewport to at most 6rem (`clamp(3rem, min(6.6vw, 10vh), 6rem)`) and wraps at 8ch.
-- **Headline** (700, 1.75rem, 1.1, -0.02em): the title inside a window. The greeting in `about.md` is 2rem.
+- **Display** (700, `clamp(2.75rem, 12vw, 5rem)`, 0.92, -0.03em): the name on the wallpaper, in orange. On the desktop the size is fluid, `clamp(3rem, min(6.6vw, 10vh), 6rem)`, and the name wraps at 8ch.
+- **Headline** (700, 1.75rem, 1.1, -0.02em): the title inside a window.
 - **Title** (650, 1.125rem, 1.3): an entry heading, such as a job or a project.
-- **Body** (400, 1.0625rem, 1.6): paragraphs. Lines stop at 68ch. The line under the name is 1.125rem at weight 500.
+- **Body** (400, 1.0625rem, 1.6): paragraphs. Lines stop at 68ch.
 - **Body small** (400, 0.9375rem): lists and descriptions inside entries.
-- **Meta** (400, 0.875rem, Warm Grey): place and date lines, menu bar text. Menu bar links are weight 600.
+- **Meta** (400, 0.875rem, Sand): place and date lines, menu bar text, the Privacy link. Menu bar links are weight 600.
 - **Label** (mono 500, 0.8125rem): the filename in a title bar. File icon labels are 0.75rem.
-- **Terminal** (mono 400, 0.875rem, 1.55): terminal output and the boot log. On the stacked page the prompt line is 1rem, so phones do not zoom on focus.
+- **Terminal** (mono 400, 0.875rem, 1.55): terminal output and the boot log.
+
+One-off sizes. Each is used in exactly one place and is not a step to reuse:
+- **2rem**: the greeting in `about.md`, a Headline one step larger because it sits beside the portrait.
+- **1.25rem**: section headings on the privacy page, with no letter spacing.
+- **1.125rem at weight 500**: the line under the name.
+- **1rem**: the brand in the menu bar (Bricolage 700), and the terminal prompt on the stacked page, so phones do not zoom when it is focused.
+- **Fluid logo sizes**: the ASCII logo scales with its container, `min(1.55vw, 0.8125rem)` on the boot screen and `min(1.5cqw, 0.75rem)` in the terminal. Inline code is 0.875em.
 
 ### Named Rules
-**The Three Voices Rule.** Bricolage Grotesque is for the name, window titles, entry titles and the "TORRES OS" brand. Mono is for filenames, the terminal and the boot log. Everything else is system sans.
+**The Three Voices Rule.** Bricolage Grotesque is for the name, window titles, entry titles and the "TORRES OS" brand. Mono is for filenames, the terminal, the boot log and inline code. Everything else is system sans.
 
 **The Tabular Numbers Rule.** The clock and the year column use tabular figures so they do not shift.
 
@@ -203,12 +274,16 @@ There are two layouts. A script that runs before first paint picks one.
 **Desktop** applies when the viewport is at least 900px wide and 560px tall and the pointer is fine (a mouse or trackpad). The page does not scroll. A fixed 2.5rem menu bar sits on top and the rest is the desk:
 - File icons sit top left in a grid of two 8.25rem columns.
 - The name sits bottom left, 2rem from the edge.
+- The Privacy link sits bottom right, 1rem from the edge.
 - Windows are absolutely placed, at most the desk height minus 2rem, and scroll inside.
 - `about.md` opens top right (30rem wide, 2rem from the top and right edges). The other files open on the right as a cascade, each 1.5rem lower and further left than the last, 32rem to 40rem wide.
 - From 90rem wide, the terminal opens at start in its own column at the bottom (21rem tall), between the name and `about.md`, so the two never overlap. Below 90rem only `about.md` opens at start and the terminal opens on request over the lower left (`min(32rem, 100% - 4rem)` wide).
 - Windows drag by the title bar. A window cannot go above the menu bar, and at least 96px of it stays on screen at each side.
+- A maximised window fills the desk with a 0.75rem margin (1.75rem at the bottom, so the Privacy link stays visible). Its text column stays at most 44rem wide; the terminal uses the full width.
 
-**Stacked** applies everywhere else, including without JavaScript. It is one column, at most 44rem wide, with a sticky menu bar, the name first, then the icons as a wrapping grid (7rem minimum per icon), then every window in order with a 1.25rem gap. Icons are plain anchor links. Close buttons are hidden. Without JavaScript the terminal and its icon are hidden.
+**Stacked** applies everywhere else, including without JavaScript. It is one column, at most 44rem wide, with a sticky menu bar, the name first, then the icons as a wrapping grid (7rem minimum per icon), then every window in order with a 1.25rem gap, then the Privacy link, centred. Icons are plain anchor links. Window buttons are hidden. Without JavaScript the terminal and its icon are hidden. If the window script fails to load, the desktop falls back to this layout.
+
+**The privacy page** always uses the stacked layout and loads no script. It is the menu bar (the brand links home, there is no clock) and one window, `privacy.md`, with no buttons.
 
 When the viewport changes from one layout to the other, dragged windows return to their start positions. Below 30rem the clock is hidden.
 
@@ -216,74 +291,81 @@ Spacing uses a small set of values: 1.25rem for most gaps, 1.5rem for window pad
 
 ## Elevation & Depth
 
-The stacked page is flat: windows have a 1px ink outline and no shadow. Shadows exist only on the desktop, where windows overlap, and they are soft and tinted with the ink colour.
+Depth comes first from tone: the wallpaper is the darkest coffee, windows are one step lighter, title bars one step lighter again. The stacked page is flat: windows have a 1px Hairline outline and no shadow. Shadows exist only on the desktop, where windows overlap. They are pure black, because a tinted shadow does not show on a dark ground.
 
 ### Shadow Vocabulary
-- **Window at rest** (`box-shadow: 0 8px 20px -12px rgb(32 21 21 / 0.45)`): an open window that is not in front.
-- **Window in front** (`box-shadow: 0 22px 44px -16px rgb(32 21 21 / 0.6)`): the active window.
+- **Window at rest** (`box-shadow: 0 8px 20px -12px rgb(0 0 0 / 0.6)`): an open window that is not in front.
+- **Window in front** (`box-shadow: 0 22px 44px -14px rgb(0 0 0 / 0.8)`): the active window.
 
 ### Named Rules
-**The Front Window Rule.** The active window is shown in three ways at once: the deeper shadow, a tinted title bar (Soft Canvas, or Terminal Bar), and a title in full ink. Windows behind it have a title bar in their body colour and a muted title.
+**The Front Window Rule.** The active window is shown in five ways at once: the deeper shadow, a lighter outline (Stone), a tinted title bar (Soft Canvas, or Terminal Bar), a title in Cream Ink, and an orange label on its file icon. Windows behind it have a Hairline outline, a title bar in their body colour, a Sand title, and a Soft Canvas label on their icon.
 
 **The Shadows Mean Stacking Rule.** A shadow says that one thing lies on top of another. Nothing on the stacked page, the menu bar or the buttons has one.
 
 ## Shapes
 
-Corners are gently rounded and consistent. Windows, the primary button and the portrait use 12px. Small controls (file icons, the close button) use 6px. The highlight behind an icon label uses 4px. Nothing is fully round.
+Corners are gently rounded and consistent. Windows, the primary button and the portrait use 12px. Small things (file icons and their labels, window buttons, the marker, inline code) use 6px. The focus ring has a 2px radius of its own. Nothing is fully round.
 
-Lines are always 1px: Coffee Ink for the outline of a window, the portrait and the menu bar rule, and Hairline for dividers inside a window.
+Lines are always 1px: Hairline for the outline of a window, the portrait, the menu bar rule and dividers inside a window; Stone for the outline of the front window.
 
-Icons are small drawings made for this site: a 40px grid, 1.5px ink strokes with round joins, and a cream fill. The terminal icon is the inverse (ink fill, cream strokes). The close icon is a 12px cross in the current text colour.
+Icons are small drawings made for this site: a 40px grid, 1.5px cream strokes with round joins, on a Soft Canvas fill. The terminal icon has a Terminal Ground fill, a cream outline and an orange prompt. The window button icons (maximise, restore, close) are 12px line drawings in the current text colour.
 
 ## Components
 
 ### Window
 The main container. Every piece of content lives in one.
-- **Shape:** Cream Canvas, 1px Coffee Ink outline, 12px corners, content clipped to the corners.
-- **Title bar:** at least 2.25rem high, Soft Canvas, a Hairline rule below, the filename in mono on the left, the close button on the right.
+- **Shape:** Coffee Canvas, 1px Hairline outline, 12px corners, content clipped to the corners.
+- **Title bar:** at least 2.25rem high, a Hairline rule below, the filename in mono on the left, the maximise and close buttons on the right.
 - **Body:** 1.5rem padding. On the desktop it scrolls inside with a thin scrollbar.
 - **Entries:** repeated items inside a window are separated by a Hairline rule with 1.75rem above and 1.5rem below it. There are no cards inside windows.
 - **Desktop behaviour:** drag by the title bar (grab cursor), click to bring to front, Escape or the close button to close. Closing returns focus to the icon and brings the next window to the front.
+- **Maximise:** the square button, or a double-click on the title bar, fills the desk; the same again restores it. The button's icon and label change to "Restore". A maximised window cannot be dragged. Closing a window restores it.
 
 ### Terminal window
-The one dark window. Same shape as a window, with the terminal colours and mono type.
+The darkest window. Same shape as a window, with the terminal colours and mono type.
 - **Body:** 1rem padding, at least 16rem high when stacked, text cursor everywhere. A click anywhere focuses the prompt unless text is selected.
 - **Prompt:** orange label, a bare input with no border, an orange block caret.
-- **Output:** echoed commands in Terminal Mute with 0.75rem above, errors in orange, the ASCII logo in orange scaled to the window width.
-- **Focus ring and selection:** orange instead of ink.
+- **Output:** echoed commands in Terminal Mute with 0.75rem above, entry titles and errors in orange, the ASCII logo in orange scaled to the window width.
+- **Focus ring and selection:** orange instead of cream.
 
 ### File icon
-- **Style:** a 40px drawing above a mono label (0.75rem, weight 500), centred, in ink on the orange ground.
-- **Hover and open:** the label gets an ink background with cream text and 4px corners. An open file keeps this state.
+- **Style:** a 40px drawing above a mono label (0.75rem, weight 500), centred, in cream on the wallpaper.
+- **Open:** the label of an open file gets a Soft Canvas background.
+- **Front:** the label of the front window's file is orange with Coffee On Orange text. Only one icon is orange at a time.
+- **Hover:** the label turns cream with Coffee On Orange text.
 - **Press:** the icon scales to 0.97.
 
 ### Primary button
 One per page: the main call to action.
 - **Shape:** 12px corners, `0.75rem 1.25rem` padding, 1.0625rem at weight 600.
-- **Colour:** orange fill, ink text. On hover: ink fill, cream text.
+- **Colour:** orange fill, Coffee On Orange text. On hover the fill turns cream; the text stays.
 - **Press:** scales to 0.97.
 
 ### Links
-- **In a window:** Rust Link, 1px underline offset by 0.2em. Ink on hover.
-- **Entry titles that link:** ink, underlined.
+- **In a window:** Link Orange, 1px underline offset by 0.2em. Cream on hover.
+- **Entry titles that link, and the Privacy link:** cream, underlined.
+
+### Marker and inline code
+- **Marker:** Rust Mark behind Cream Ink, 6px corners, for key terms in the files.
+- **Inline code:** mono at 0.875em on Soft Canvas, 6px corners. Used on the privacy page.
 
 ### Menu bar
-- **Style:** 2.5rem high, Cream Canvas, 1px ink rule below. The brand in Bricolage Grotesque 700 on the left, then three ink links at weight 600 and the clock in Warm Grey on the right.
+- **Style:** 2.5rem high, Coffee Canvas, 1px Hairline rule below. The brand in Bricolage Grotesque 700 on the left, then three cream links at weight 600 and the clock in Sand on the right.
 - **Hover:** a 2px orange underline.
 
-### Close button
-- **Style:** a 2.25rem square target with a 12px cross and 6px corners. Rust Link on hover (orange in the terminal). Scales to 0.9 on press. Desktop only.
+### Window buttons
+- **Style:** maximise and close, each a 2.25rem square target with a 12px icon and 6px corners. Link Orange on hover (Electric Orange in the terminal). Scales to 0.95 on press. Desktop only.
 
 ### Focus
-Every focusable control shows a 2px ink outline, offset by 2px (orange inside the terminal).
+Every focusable control shows a 2px cream outline, offset by 2px, with a 2px radius (orange inside the terminal). On window buttons the outline sits 4px inside the target.
 
 ### Motion
 - **Boot:** a dark full-screen log that plays once per browser session, on first load only. Three log lines print at 400, 750 and 1200ms, and each `[ ok ]` arrives 200, 250 and 800ms after its line, so the rhythm is uneven on purpose. The welcome line prints at 2300ms. A block cursor blinks in steps on the line being worked on. The screen fades out in four steps over 240ms from 3000ms, and the windows start opening as the fade starts. Any click or key skips it. It runs in CSS, so it ends even if the script fails.
-- **Pointer only:** windows animate when opened or closed with the mouse. Anything started from the keyboard (Enter on an icon, Escape, the terminal's `open` and `exit`) happens at once, with no transition. Every window grows from its own icon and shrinks back to it.
-- **Maximise:** the square button in a title bar, or a double-click on the bar, makes the window fill the desk with a 0.75rem margin (1.75rem at the bottom, so the Privacy link stays visible); the same again restores it. The switch is instant, the text column stays at most 44rem wide (the terminal uses the full width), and a maximised window cannot be dragged. Closing a window restores it.
+- **Pointer only:** windows animate when opened or closed with the mouse. Anything started from the keyboard (Enter on an icon, Escape, the terminal's `open` and `exit`) happens at once, with no transition.
 - **Open:** a window fades in and scales from 0.96 to 1 in 180ms with the ease-out curve `cubic-bezier(0.23, 1, 0.32, 1)`. A window opened from an icon grows from that icon.
 - **Close:** a window fades out and scales to 0.97 in 120ms.
-- **Start:** on wide desktops the terminal opens first and `about.md` follows 120ms later.
+- **Maximise and restore:** instant.
+- **Start:** on wide desktops the terminal opens first and `about.md` follows 70ms later.
 - **Press and hover:** press scale takes 140ms with the same curve. The button colour change takes 160ms.
 - **Reduced motion:** no boot sequence, no scaling, no press transitions, no smooth scrolling. Windows still fade.
 - Hover styles apply only on devices that hover with a fine pointer.
@@ -291,19 +373,22 @@ Every focusable control shows a 2px ink outline, offset by 2px (orange inside th
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep orange as the ground and put content in cream windows.
-- **Do** put Coffee Ink on orange for all text and icons on the wallpaper.
+- **Do** keep the wallpaper dark coffee and put content in lighter coffee windows with cream text.
+- **Do** keep orange as the single accent, and use Link Orange for text inside a window.
+- **Do** put Coffee On Orange text on every orange or cream fill.
 - **Do** give every new piece of content its own window with a filename, a file icon and an entry in the terminal, read from the same HTML.
-- **Do** use 1px lines: ink for outlines, Hairline for dividers inside a window.
+- **Do** use 1px lines: Hairline for outlines and dividers, Stone for the front window.
 - **Do** keep hover styles inside `(hover: hover) and (pointer: fine)`.
 - **Do** make sure new content also works on the stacked page and without JavaScript.
-- **Do** keep window motion at 180ms to open and 120ms to close, with a reduced-motion version that only fades.
+- **Do** keep window motion at 180ms to open and 120ms to close, instant from the keyboard, with a reduced-motion version that only fades.
 
 ### Don't:
-- **Don't** use orange for text on cream. Use Rust Link.
-- **Don't** add a second dark surface. The terminal and the boot screen are the only ones.
+- **Don't** use Electric Orange for text inside a window. Use Link Orange.
+- **Don't** put cream text on orange.
+- **Don't** add a second accent colour. Amber, green and blue belong to the terminal only.
+- **Don't** add a light surface or a light theme. Cream is for text, strokes and hover fills.
 - **Don't** use gradients, pills or fully round corners.
 - **Don't** add shadows on the stacked page, or to buttons and the menu bar.
-- **Don't** use mono type outside filenames, the terminal and the boot log.
+- **Don't** use mono type outside filenames, the terminal, the boot log and inline code.
 - **Don't** add scroll animations, looping animations or a second intro. The boot sequence is the only staged motion.
 - **Don't** put cards inside windows. Separate entries with a Hairline rule.
