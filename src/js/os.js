@@ -199,6 +199,7 @@
     ['projects', 'my projects'],
     ['certificates', 'my certificates'],
     ['contact', 'where to reach me'],
+    ['privacy', 'open the privacy notice'],
     ['open <file>', 'open a file as a window, e.g. open work'],
     ['neofetch', 'system information'],
     ['clear', 'clear the screen'],
@@ -228,6 +229,7 @@
       print(LOGO, 'logo');
       print('TORRES OS ' + Math.floor(d.getFullYear() / 100) + '.' + d.getFullYear() % 100 + '.' + (d.getMonth() + 1) + ' LTS\nUptime: ' + Math.round(performance.now() / 1000) + 's\nUsers logged in: 1\n0 updates can be installed immediately.');
     },
+    privacy: function () { location.href = 'privacy/'; },
     clear: function () { termOut.textContent = ''; },
     exit: function () {
       if (isOS()) close(document.getElementById('terminal'));
