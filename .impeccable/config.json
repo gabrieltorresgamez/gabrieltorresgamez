@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-11T19:38:29.732Z",
+        "reason": "agent decided: finish review traced it to the display headings only (h1 at 0.92, window h2 at 1.1), short lines with no collisions; body text is 1.6"
+      }
+    ]
+  }
+}

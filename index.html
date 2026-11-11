@@ -1,32 +1,349 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Gabriel Torres Gamez - Portfolio</title>
-  <meta name="author" content="Gabriel Torres Gamez" />
-  <meta name="description" content="Hii! My name is Gabriel and this is my Terminal Styled Portfolio." />
-  <meta name="keywords" content="stellarmilk, gabrieltorresgamez, gabriel, torres, gamez" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Gabriels Portfolio" />
-  <meta property="og:author" content="Gabriel Torres Gamez" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Gabriel Torres Gamez · TORRES OS</title>
+  <meta name="author" content="Gabriel Torres Gamez" />
+  <meta name="description"
+    content="Gabriel Torres Gamez, data scientist and software engineer in Zürich. His work, education and projects, as a small desktop you can click through." />
+  <meta name="theme-color" content="#ff4f00" />
+  <link rel="canonical" href="https://torres.swiss/" />
+  <meta property="og:title" content="Gabriel Torres Gamez · TORRES OS" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://torres.swiss" />
-  <meta property="og:description" content="Hii! My name is Gabriel and this is my Terminal Styled Portfolio." />
-  <meta property="og:image" content="/src/assets/me.jpg" />
-  <meta property="og:image:secure_url" content="/src/assets/me.jpg" />
-	<link rel="icon" href="src/assets/favicon.svg" type="image/svg+xml" sizes="any">
-  <link rel="stylesheet" href="src/css/jquery.terminal-2.41.1.min.css" />
+  <meta property="og:url" content="https://torres.swiss/" />
+  <meta property="og:description"
+    content="Data scientist and software engineer in Zürich. Work, education and projects, as a small desktop you can click through." />
+  <meta property="og:image" content="https://torres.swiss/src/assets/me.jpg" />
+  <link rel="icon" href="src/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="src/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2"
+    crossorigin />
   <link rel="stylesheet" href="src/css/styles.css" />
-  <script src="src/js/jquery-3.7.1.min.js"></script>
-  <script src="src/js/jquery.terminal-2.41.1.min.js"></script>
-  <script src="src/js/index.js" type="module"></script>
-  <script src="src/js/portfolio.js" type="module"></script>
+  <script src="src/js/mode.js"></script>
+  <script src="src/js/os.js" defer></script>
 </head>
-<!DOCTYPE html>
 
 <body>
-  <div id="app"></div>
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="i-doc" viewBox="0 0 40 40">
+      <path d="M9 4h15l8 8v24H9z" fill="#fffefb" stroke="#201515" stroke-width="1.5" stroke-linejoin="round" />
+      <path d="M24 4v8h8M14 20h12M14 25h12M14 30h7" fill="none" stroke="#201515" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-folder" viewBox="0 0 40 40">
+      <path d="M4 9h11l4 4h17v21H4z" fill="#fffefb" stroke="#201515" stroke-width="1.5" stroke-linejoin="round" />
+      <path d="M4 17h32" fill="none" stroke="#201515" stroke-width="1.5" />
+    </symbol>
+    <symbol id="i-term" viewBox="0 0 40 40">
+      <rect x="4" y="7" width="32" height="26" rx="3" fill="#201515" stroke="#201515" stroke-width="1.5" />
+      <path d="M11 16l5 4-5 4M20 25h8" fill="none" stroke="#fffefb" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 12 12">
+      <path d="M2.5 2.5l7 7M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" />
+    </symbol>
+  </svg>
+
+  <div class="boot" aria-hidden="true">
+    <pre class="boot-logo">
+████████╗ ██████╗ ██████╗ ██████╗ ███████╗███████╗     ██████╗ ███████╗
+╚══██╔══╝██╔═══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔═══██╗██╔════╝
+   ██║   ██║   ██║██████╔╝██████╔╝█████╗  ███████╗    ██║   ██║███████╗
+   ██║   ██║   ██║██╔══██╗██╔══██╗██╔══╝  ╚════██║    ██║   ██║╚════██║
+   ██║   ╚██████╔╝██║  ██║██║  ██║███████╗███████║    ╚██████╔╝███████║
+   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝     ╚═════╝ ╚══════╝</pre>
+    <p><b>[ ok ]</b> Mounting /home/gabriel</p>
+    <p><b>[ ok ]</b> Loading work experience</p>
+    <p><b>[ ok ]</b> Starting window manager</p>
+    <p>Welcome to TORRES OS.</p>
+  </div>
+
+  <header class="bar">
+    <span class="brand">TORRES OS</span>
+    <nav class="bar-links" aria-label="Contact">
+      <a href="https://www.linkedin.com/in/gabrieltorresgamez/">LinkedIn</a>
+      <a href="https://github.com/gabrieltorresgamez">GitHub</a>
+      <a href="mailto:mail@torres.swiss">Mail</a>
+    </nav>
+    <time class="clock" id="clock"></time>
+  </header>
+
+  <main class="desk" id="desk">
+    <div class="hero">
+      <h1>Gabriel Torres Gamez</h1>
+      <p>Data scientist and software engineer in Zürich.</p>
+    </div>
+
+    <nav class="files" aria-label="Files">
+      <a href="#about"><svg width="40" height="40" aria-hidden="true">
+          <use href="#i-doc" />
+        </svg><span>about.md</span></a>
+      <a href="#work"><svg width="40" height="40" aria-hidden="true">
+          <use href="#i-doc" />
+        </svg><span>work.md</span></a>
+      <a href="#education"><svg width="40" height="40" aria-hidden="true">
+          <use href="#i-doc" />
+        </svg><span>education.md</span></a>
+      <a href="#projects"><svg width="40" height="40" aria-hidden="true">
+          <use href="#i-folder" />
+        </svg><span>projects</span></a>
+      <a href="#certificates"><svg width="40" height="40" aria-hidden="true">
+          <use href="#i-doc" />
+        </svg><span>certificates.md</span></a>
+      <a href="#terminal" class="needs-js"><svg width="40" height="40" aria-hidden="true">
+          <use href="#i-term" />
+        </svg><span>terminal</span></a>
+    </nav>
+
+    <section class="win" id="about" aria-labelledby="about-h" tabindex="-1">
+      <header class="win-bar">
+        <span class="win-name">about.md</span>
+        <button class="win-close" type="button" aria-label="Close about.md"><svg width="12" height="12"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </header>
+      <div class="win-body">
+        <div class="about-top">
+          <img src="src/assets/me.jpg" width="96" height="96" alt="Portrait of Gabriel Torres Gamez" />
+          <h2 id="about-h">Hi, I'm Gabo.</h2>
+        </div>
+        <p>I'm a data scientist and software engineer from Zürich. I work as an Application Engineer for data and
+          integration at UMB, and I teach Web Data Acquisition at FHNW.</p>
+        <p>Proficient at transforming complex problems into innovative solutions. Ambitious, analytical, curious, with
+          strong team collaboration abilities.</p>
+        <ul class="actions">
+          <li><a class="btn" href="https://www.linkedin.com/in/gabrieltorresgamez/">Connect on LinkedIn</a></li>
+          <li><a href="mailto:mail@torres.swiss">mail@torres.swiss</a></li>
+          <li><a href="https://github.com/gabrieltorresgamez">GitHub</a></li>
+          <li><a href="https://fuet.ch">Blog</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="win" id="work" aria-labelledby="work-h" tabindex="-1">
+      <header class="win-bar">
+        <span class="win-name">work.md</span>
+        <button class="win-close" type="button" aria-label="Close work.md"><svg width="12" height="12"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </header>
+      <div class="win-body">
+        <h2 id="work-h">Work experience</h2>
+
+        <article class="entry">
+          <h3>Application Engineer, Data &amp; Integration</h3>
+          <p class="meta"><b>UMB AG</b> · Urdorf, Zürich · <span class="when now">Jul 2025 – now</span></p>
+          <ul>
+            <li>Developed and maintained the company-wide enterprise service management platform <mark>OMNITRACKER</mark> across 12
+              business areas, from implementation to production release.</li>
+            <li>Led the implementation of <mark>absence and vacation management</mark>, including fully automated vacation
+              entitlement calculation.</li>
+            <li>Designed and rolled out <mark>REST APIs</mark> for ServiceNow time tracking and customer ticketing, and migrated the
+              SharePoint interface to the <mark>Microsoft Graph API</mark>.</li>
+            <li>Held technical ownership of the company-wide <mark>physical access control system</mark>, including migration to its
+              successor product.</li>
+            <li>Built a <mark>Python MCP server</mark> giving the team's AI assistants structured access to product documentation and
+              system knowledge.</li>
+            <li>Co-authored the team's <mark>development guidelines</mark> and gave internal tech talks on Git, CI/CD, logging, and
+              AI-assisted development.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Lecturer FH</h3>
+          <p class="meta"><b>FHNW, University of Applied Sciences and Arts Northwestern Switzerland</b> · Brugg, Aargau · <span class="when now">Feb 2025 – now</span></p>
+          <ul>
+            <li>Lecturer for the course <mark>“Web Data Acquisition”</mark> in the B.Sc. Data Science program.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Lecturer HF</h3>
+          <p class="meta"><b>ABB Technikerschule</b> · Baden, Aargau · <span class="when">Apr 2024 – Jun 2025</span></p>
+          <ul>
+            <li>Designed and lectured <mark>“Data Science &amp; Artificial Intelligence”</mark> for HF programs in Building
+              Automation and Energy &amp; Environmental Engineering.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Junior Data Engineer</h3>
+          <p class="meta"><b>Baloise Asset Management</b> · Basel · <span class="when">Aug 2024 – Apr 2025</span></p>
+          <ul>
+            <li>Conducted requirements analysis and designed, implemented, and managed a Product Master database using
+              <mark>PostgreSQL</mark>.</li>
+            <li>Developed <mark>Python-based</mark> data import and export pipelines ensuring reliable Excel-based workflows.</li>
+            <li>Implemented <mark>Mage-ETL</mark> pipelines on <mark>OpenShift</mark> infrastructure with <mark>Jenkins CI/CD</mark> for continuous deployment
+              and on-demand execution.</li>
+            <li><mark>Mentored</mark> a working student in developing a user-friendly frontend interface for displaying Product
+              Master data and file management through established pipelines.</li>
+            <li>Coached the product management team in utilizing the implemented data management solution and enabled
+              independent usage.</li>
+            <li>Created structured <mark>programming guidelines</mark> according to modern industry standards.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Data Scientist (Civil Service)</h3>
+          <p class="meta"><b>EMPA, Swiss Federal Laboratories for Materials Science and Technology</b> · Dübendorf, Zürich · <span class="when">Jul 2023 – Aug 2023</span></p>
+          <ul>
+            <li>Collaborator in the “Air Pollution and Environmental Technology” department.</li>
+            <li>Revision of the algorithm for the detection of compounds in <mark>GC-MS</mark> data for the open-source project
+              <mark>ALPINAC</mark>.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Technical Support Specialist</h3>
+          <p class="meta"><b>University Hospital Balgrist</b> · Zürich · <span class="when">Aug 2022</span></p>
+          <ul>
+            <li>First and second level support for the clinic and campus environment.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Class and Student Assistance (Civil Service)</h3>
+          <p class="meta"><b>Eduzis, Schulhaus Seehalde</b> · Niederhasli, Zürich · <span class="when">Sep 2020 – Sep 2021</span></p>
+          <ul>
+            <li>Supporting young people in class and during the lunch break.</li>
+            <li>Temporary help in the IT department.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Software Developer (Apprenticeship)</h3>
+          <p class="meta"><b>University Hospital Balgrist</b> · Zürich · <span class="when">Aug 2016 – Jul 2020</span></p>
+          <ul>
+            <li>First and second level support for the clinic and campus environment.</li>
+            <li>Assistance in the field of network technology.</li>
+            <li>Support of administrative and medical applications.</li>
+            <li>Supporting medical doctors in research tasks with process optimizations and data management.</li>
+            <li>Sole development of smaller customer-specific projects.</li>
+            <li>Participation in large cross-company projects like the <mark>digital patient portal</mark>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="win" id="education" aria-labelledby="education-h" tabindex="-1">
+      <header class="win-bar">
+        <span class="win-name">education.md</span>
+        <button class="win-close" type="button" aria-label="Close education.md"><svg width="12" height="12"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </header>
+      <div class="win-body">
+        <h2 id="education-h">Education</h2>
+
+        <article class="entry">
+          <h3>CAS Software Architecture</h3>
+          <p class="meta"><b>HSLU, Lucerne University of Applied Sciences and Arts</b> · Rotkreuz, Zug · <span class="when now">Sep 2026 – now</span></p>
+        </article>
+
+        <article class="entry">
+          <h3>B.Sc. in Data Science</h3>
+          <p class="meta"><b>FHNW, University of Applied Sciences and Arts Northwestern Switzerland</b> · Brugg, Aargau · <span class="when">Sep 2021 – Feb 2025</span></p>
+          <ul>
+            <li>Several interdisciplinary projects in areas such as <mark>AI security</mark>, astronomy, sensor technology, IoT, real
+              estate and air quality.</li>
+            <li>Strong focus on <mark>deep learning</mark>, including adversarial attacks, computer vision, natural language
+              processing, signal processing, and social network analysis.</li>
+            <li>Regularly approached by fellow students for advice on a broad range of technical challenges.</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>Vocational Training in Software Development (EFZ) and Vocational Baccalaureate (BM1)</h3>
+          <p class="meta"><b>BBW, Berufsbildungsschule Winterthur</b> · Winterthur, Zürich · <span class="when">Aug 2016 – Jul 2020</span></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="win" id="projects" aria-labelledby="projects-h" tabindex="-1">
+      <header class="win-bar">
+        <span class="win-name">projects</span>
+        <button class="win-close" type="button" aria-label="Close projects"><svg width="12" height="12"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </header>
+      <div class="win-body">
+        <h2 id="projects-h">Projects</h2>
+
+        <article class="entry">
+          <h3><a href="https://github.com/AdversarialAttacks">Adversarial Attacks in Medicine</a></h3>
+          <p>Enhancing the robustness of disease detection models against <mark>universal adversarial attacks</mark>.</p>
+        </article>
+        <article class="entry">
+          <h3><a href="https://github.com/i4Ds/FlareSense">FlareSense</a></h3>
+          <p>A classification model for the detection of <mark>solar flares</mark> using the e-Callisto solar spectrometer
+            network.</p>
+        </article>
+        <article class="entry">
+          <h3><a href="https://github.com/Sensor-Based-Activity-Recognition">Sensor Based Activity Recognition</a></h3>
+          <p>Using <mark>smartphone sensors</mark> to classify movement and workout profiles.</p>
+        </article>
+        <article class="entry">
+          <h3><a href="https://github.com/Immobilienrechner-Challenge">Real Estate Price Prediction</a></h3>
+          <p>A website for predicting <mark>real estate prices</mark> in Switzerland.</p>
+        </article>
+        <article class="entry">
+          <h3><a href="https://github.com/Smart-Classroom-Challenge">Smart Classroom</a></h3>
+          <p>A complete <mark>IoT solution</mark> for monitoring and evaluating air quality in classrooms.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="win" id="certificates" aria-labelledby="certificates-h" tabindex="-1">
+      <header class="win-bar">
+        <span class="win-name">certificates.md</span>
+        <button class="win-close" type="button" aria-label="Close certificates.md"><svg width="12" height="12"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </header>
+      <div class="win-body">
+        <h2 id="certificates-h">Certificates</h2>
+        <ul class="certs">
+          <li><span class="yr">2025</span> <span><b>ITIL Foundation Certificate in IT Service Management</b>, PeopleCert</span></li>
+          <li><span class="yr">2025</span> <span><b>Azure Fundamentals</b>, Microsoft</span></li>
+          <li><span class="yr">2023</span> <span><b>Data Hackdays BE 2023</b>, Kanton Bern</span></li>
+          <li><span class="yr">2022</span> <span><b>MAKEathon 2022</b>, FHNW</span></li>
+          <li><span class="yr">2021</span> <span><b>Betreuung von Jugendlichen 2</b>, CURAVIVA</span></li>
+          <li><span class="yr">2020</span> <span><b>Betreuung von Jugendlichen 1</b>, CURAVIVA</span></li>
+          <li><span class="yr">2020</span> <span><b>Kommunikation und Betreuung (KoBe)</b>, Swiss Red Cross</span></li>
+          <li><span class="yr">2018</span> <span><b><span lang="es">Certificado de Lengua y Cultura Españolas</span> C1</b>, <span lang="es">Ministerio de Educación de España</span></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="win term needs-js" id="terminal" aria-labelledby="terminal-h" tabindex="-1">
+      <header class="win-bar">
+        <span class="win-name">terminal</span>
+        <button class="win-close" type="button" aria-label="Close terminal"><svg width="12" height="12"
+            aria-hidden="true">
+            <use href="#i-close" />
+          </svg></button>
+      </header>
+      <div class="win-body">
+        <h2 id="terminal-h" class="sr-only">Terminal</h2>
+        <div class="term-out" id="term-out" role="log" aria-live="polite"></div>
+        <form class="term-line" id="term-form">
+          <label for="term-in">guest@torres.swiss:~$</label>
+          <input id="term-in" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+            enterkeyhint="go" />
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
