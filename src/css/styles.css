@@ -1,4 +1,4 @@
-/* TORRES OS. Dark coffee desktop with one orange accent; values shared with fuet.ch and arc.fuet.ch. */
+/* TORRES OS. The dark theme of the Torres design system, shared with fuet.ch and arc.fuet.ch. */
 @font-face {
   font-family: 'Bricolage Grotesque Variable';
   font-style: normal;
@@ -9,34 +9,51 @@
 
 :root {
   color-scheme: dark;
-  --orange: #ff4f00;
-  --on-orange: #201515; /* text on orange and on cream fills */
-  --ground: #1a1210; /* the wallpaper */
-  --canvas: #241c19; /* windows and the menu bar */
-  --canvas-soft: #2f2622;
+  /* Torres, dark theme. */
+  --accent: #ff4f00;
+  --on-accent: #201515;
+  --link: #ff4f00;
   --ink: #fffefb;
   --body: #c5c0b1;
-  --hairline: #4a4039;
+  --canvas: #1a1210; /* the wallpaper */
+  --canvas-soft: #241c19;
+  --surface-raised: var(--canvas-soft); /* windows and the menu bar */
+  --hairline: #3a332d;
   --border: #807d72;
-  --link: #ff6a26;
   --selection: #7c2d12;
+  --elevation-2: 0 8px 20px -12px rgb(0 0 0 / 0.6);
+  --elevation-3: 0 22px 44px -14px rgb(0 0 0 / 0.8);
+  /* Terminal only: dark in every theme, three colours with one meaning each. */
   --term-bg: #120c0a;
   --term-soft: #1a1210;
-  --term-line: #3a332d;
-  --term-ink: #fffefb;
-  --term-mute: #c5c0b1;
-  /* Terminal text colours, used like a shell theme: one meaning each. */
   --term-amber: #ffc46b;
   --term-green: #a9d18e;
   --term-blue: #8ecae6;
-  --display: 'Bricolage Grotesque Variable', system-ui, sans-serif;
-  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  --font-display: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
   --radius: 12px;
   --radius-sm: 6px;
   --bar: 2.5rem;
-  --gutter: clamp(1rem, 4vw, 2rem);
+  --gutter: clamp(1.25rem, 5vw, 2rem);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Torres hc-dark: text 7:1 or more, edges 3:1 or more. */
+@media (prefers-contrast: more) {
+  :root {
+    --accent: #ff8a50;
+    --on-accent: #120c0a;
+    --link: #ff8a50;
+    --canvas: #120c0a;
+    --canvas-soft: #1a1210;
+    --hairline: #807d72;
+    --border: #a8a397;
+  }
+
+  .files a.is-open span {
+    outline: 1px solid var(--hairline);
+  }
 }
 
 *,
@@ -49,16 +66,17 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-padding-top: calc(var(--bar) + 1rem);
-  scrollbar-color: var(--hairline) var(--ground);
+  scrollbar-color: var(--hairline) var(--canvas);
 }
 
 body {
   margin: 0;
   min-height: 100dvh;
-  background: var(--ground);
+  background: var(--canvas);
   color: var(--ink);
-  font: 1.0625rem/1.6 var(--sans);
-  caret-color: var(--orange);
+  font: 1.125rem/1.6 var(--font-sans);
+  caret-color: var(--accent);
+  accent-color: var(--accent);
 }
 
 ::selection {
@@ -67,9 +85,9 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--ink);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
 }
 
 .sprite {
@@ -92,12 +110,12 @@ html:not(.js) .needs-js {
 a {
   color: var(--link);
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.18em;
 }
 
 @media (hover: hover) and (pointer: fine) {
   a:hover {
-    color: var(--ink);
+    text-decoration-thickness: 2px;
   }
 }
 
@@ -111,16 +129,21 @@ a {
   gap: 1.25rem;
   height: var(--bar);
   padding: 0 var(--gutter);
-  background: var(--canvas);
+  background: var(--surface-raised);
   border-bottom: 1px solid var(--hairline);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 
 .brand {
   margin-right: auto;
   white-space: nowrap;
-  font: 700 1rem/1 var(--display);
-  letter-spacing: 0.01em;
+  font: 700 1.25rem/1 var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.brand::after {
+  content: '.';
+  color: var(--accent);
 }
 
 a.brand {
@@ -145,7 +168,7 @@ a.brand {
   .bar-links a:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: var(--orange);
+    text-decoration-color: var(--accent);
   }
 }
 
@@ -158,6 +181,15 @@ a.brand {
 @media (max-width: 30rem) {
   .clock {
     display: none;
+  }
+
+  .bar,
+  .bar-links {
+    gap: 0.75rem;
+  }
+
+  .brand {
+    font-size: 1rem;
   }
 }
 
@@ -172,40 +204,38 @@ a.brand {
 
 .hero h1 {
   margin: 0;
-  color: var(--orange);
-  font: 700 clamp(2.75rem, 12vw, 5rem)/0.92 var(--display);
+  color: var(--accent);
+  font: 700 clamp(3rem, min(6.6vw, 10vh), 6rem)/0.92 var(--font-display);
   letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
 .hero p {
-  margin: 0.875rem 0 0;
+  margin: 1rem 0 0;
   text-wrap: balance;
-  font-size: 1.125rem;
-  font-weight: 500;
 }
 
 /* File icons */
 .files {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .files a {
   display: grid;
   justify-items: center;
-  gap: 0.25rem;
-  padding: 0.5rem 0.25rem;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
   border-radius: var(--radius-sm);
   color: var(--ink);
-  font: 500 0.75rem/1.3 var(--mono);
+  font: 500 0.75rem/1.3 var(--font-mono);
   text-decoration: none;
   transition: scale 140ms var(--ease-out);
 }
 
 .files span {
-  padding: 0.0625rem 0.375rem;
+  padding: 0 0.5rem;
   border-radius: var(--radius-sm);
   white-space: nowrap;
 }
@@ -219,20 +249,20 @@ a.brand {
 }
 
 .files a[aria-current] span {
-  background: var(--orange);
-  color: var(--on-orange);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .files a:hover span {
     background: var(--ink);
-    color: var(--on-orange);
+    color: var(--on-accent);
   }
 }
 
 /* Windows */
 .win {
-  background: var(--canvas);
+  background: var(--surface-raised);
   border: 1px solid var(--hairline);
   border-radius: var(--radius);
   overflow: hidden;
@@ -249,10 +279,9 @@ a.brand {
   justify-content: space-between;
   min-height: 2.25rem;
   padding-left: 0.875rem;
-  background: var(--canvas-soft);
   border-bottom: 1px solid var(--hairline);
   color: var(--body);
-  font: 500 0.8125rem/1 var(--mono);
+  font: 500 0.8125rem/1 var(--font-mono);
 }
 
 .win-name {
@@ -277,7 +306,9 @@ a.brand {
   scale: 0.95;
 }
 
+/* The ring cannot sit outside this tight control, so it is drawn inside, in ink. */
 .win-btn:focus-visible {
+  outline-color: var(--ink);
   outline-offset: -4px;
 }
 
@@ -295,56 +326,68 @@ a.brand {
 .win h1,
 .win h2 {
   margin: 0 0 1.25rem;
-  font: 700 1.75rem/1.1 var(--display);
-  letter-spacing: -0.02em;
+  font: 650 1.75rem/1.2 var(--font-display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 .win p {
-  margin: 0 0 0.875rem;
+  margin: 0 0 1rem;
   max-width: 68ch;
+  text-wrap: pretty;
 }
 
 .entry + .entry {
-  margin-top: 1.75rem;
+  margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--hairline);
 }
 
 .entry h3 {
   margin: 0;
-  font: 650 1.125rem/1.3 var(--display);
+  font: 600 1.125rem/1.3 var(--font-display);
 }
 
 .entry h3 a {
   color: var(--ink);
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .entry h3 a:hover {
+    text-decoration: underline 2px var(--accent);
+  }
 }
 
 .entry .meta {
   margin: 0.125rem 0 0;
   color: var(--body);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
 }
 
 .entry > p:not(.meta) {
-  margin: 0.375rem 0 0;
-  font-size: 0.9375rem;
+  margin: 0.5rem 0 0;
+  font-size: 1.0625rem;
+  line-height: 1.5;
 }
 
 .entry ul {
   margin: 0.75rem 0 0;
-  padding-left: 1.125rem;
-  font-size: 0.9375rem;
+  padding-left: 1.25rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
 }
 
 .entry li + li {
-  margin-top: 0.375rem;
+  margin-top: 0.5rem;
 }
 
 .entry li::marker {
   color: var(--border);
 }
 
-/* Highlights in the files: a marker for key terms, ink for the organisation, the link orange for current roles. */
+/* Highlights in the files: a marker for key terms, ink for the organisation, the accent for current roles. */
 mark {
   padding: 0.05em 0.15em;
   margin: 0 -0.15em;
@@ -354,8 +397,8 @@ mark {
 }
 
 mark::selection {
-  background: var(--orange);
-  color: var(--on-orange);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .entry .meta b {
@@ -388,7 +431,6 @@ mark::selection {
 
 .about-top h2 {
   margin: 0;
-  font-size: 2rem;
 }
 
 .actions {
@@ -410,10 +452,9 @@ mark::selection {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: var(--radius);
-  background: var(--orange);
-  color: var(--on-orange);
-  font-size: 1.0625rem;
-  font-weight: 600;
+  background: var(--accent);
+  color: var(--on-accent);
+  font: 600 1.0625rem/1.6 var(--font-sans);
   text-decoration: none;
   transition: scale 140ms var(--ease-out), background-color 160ms ease, color 160ms ease;
 }
@@ -425,18 +466,19 @@ mark::selection {
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
     background: var(--ink);
-    color: var(--on-orange);
+    color: var(--canvas);
   }
 }
 
 /* certificates.md */
 .certs {
   display: grid;
-  gap: 0.625rem;
+  gap: 0.75rem;
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
+  line-height: 1.5;
 }
 
 .certs li {
@@ -452,18 +494,18 @@ mark::selection {
 /* privacy.md and the link to it */
 .prose h2 {
   margin: 2rem 0 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   letter-spacing: 0;
 }
 
 .prose ul {
-  margin: 0 0 0.875rem;
-  padding-left: 1.125rem;
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
   max-width: 68ch;
 }
 
 .prose li + li {
-  margin-top: 0.375rem;
+  margin-top: 0.5rem;
 }
 
 .prose li::marker {
@@ -474,11 +516,13 @@ mark::selection {
   padding: 0.1em 0.3em;
   border-radius: var(--radius-sm);
   background: var(--canvas-soft);
-  font: 0.875em var(--mono);
+  outline: 1px solid var(--hairline); /* the window already has the panel tone */
+  font: 0.9em var(--font-mono);
 }
 
 .foot {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  line-height: 1.45;
   text-align: center;
 }
 
@@ -489,33 +533,29 @@ mark::selection {
 /* Terminal: the darkest window */
 .term {
   background: var(--term-bg);
-  color: var(--term-ink);
-  font: 0.875rem/1.55 var(--mono);
-  scrollbar-color: var(--term-line) var(--term-bg);
+  color: var(--ink);
+  font: 0.875rem/1.55 var(--font-mono);
+  scrollbar-color: var(--hairline) var(--term-bg);
 }
 
 .term ::selection {
-  background: var(--orange);
-  color: var(--on-orange);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .term .win-bar {
   background: var(--term-soft);
-  border-bottom-color: var(--term-line);
-  color: var(--term-mute);
+  border-bottom-color: var(--hairline);
+  color: var(--body);
 }
 
 .term .win-btn {
-  color: var(--term-ink);
-}
-
-.term :focus-visible {
-  outline-color: var(--orange);
+  color: var(--ink);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .term .win-btn:hover {
-    color: var(--orange);
+    color: var(--accent);
   }
 }
 
@@ -525,7 +565,7 @@ mark::selection {
   min-height: 16rem;
   padding: 1rem;
   cursor: text;
-  scrollbar-color: var(--term-line) transparent;
+  scrollbar-color: var(--hairline) transparent;
 }
 
 .term-out > div {
@@ -535,7 +575,7 @@ mark::selection {
 
 .term-out .cmd {
   margin-top: 0.75rem;
-  color: var(--term-mute);
+  color: var(--body);
 }
 
 .term-out .cmd:first-child {
@@ -548,12 +588,12 @@ mark::selection {
 
 .term-out .t-h3 {
   margin-top: 0.75rem;
-  color: var(--orange);
+  color: var(--accent);
   font-weight: 600;
 }
 
 .term-out .t-meta {
-  color: var(--term-mute);
+  color: var(--body);
 }
 
 .term-out .org,
@@ -571,16 +611,16 @@ mark::selection {
 }
 
 .term-out .when {
-  color: var(--term-mute);
+  color: var(--body);
 }
 
 .term-out .err {
-  color: var(--orange);
+  color: var(--accent);
 }
 
 .term-out .logo {
   overflow: hidden;
-  color: var(--orange);
+  color: var(--accent);
   font-size: min(1.5cqw, 0.75rem);
   line-height: 1;
   white-space: pre;
@@ -594,7 +634,7 @@ mark::selection {
 
 .term-line label {
   flex: none;
-  color: var(--orange);
+  color: var(--accent);
 }
 
 .term-line input {
@@ -606,7 +646,7 @@ mark::selection {
   background: none;
   color: inherit;
   font: inherit;
-  caret-color: var(--orange);
+  caret-color: var(--accent);
   caret-shape: block;
 }
 
@@ -627,17 +667,16 @@ html.booting .boot {
   display: grid;
   align-content: center;
   justify-content: center;
-  gap: 0.25rem;
   padding: var(--gutter);
   background: var(--term-bg);
-  color: var(--term-ink);
-  font: 0.875rem/1.5 var(--mono);
+  color: var(--ink);
+  font: 0.875rem/1.5 var(--font-mono);
   animation: boot-out 240ms 3000ms steps(4) forwards;
 }
 
 .boot-logo {
   margin: 0 0 1.25rem;
-  color: var(--orange);
+  color: var(--accent);
   font: inherit;
   font-size: min(1.55vw, 0.8125rem);
   line-height: 1;
@@ -675,7 +714,7 @@ html.booting .boot {
 }
 
 .boot b {
-  color: var(--orange);
+  color: var(--accent);
   font-weight: 500;
   opacity: 0;
   animation: boot-line 1ms calc(var(--t) + var(--ok)) forwards;
@@ -688,7 +727,7 @@ html.booting .boot {
   width: 0.6em;
   height: 1.15em;
   margin-left: 0.5em;
-  background: var(--orange);
+  background: var(--accent);
   vertical-align: text-bottom;
   animation: boot-blink 600ms steps(1) infinite, boot-cursor-off 1ms var(--next) forwards;
 }
@@ -752,12 +791,11 @@ html.os,
 .os .hero {
   position: absolute;
   left: 2rem;
-  bottom: 1.75rem;
+  bottom: 2rem;
 }
 
 .os .hero h1 {
   max-width: 8ch;
-  font-size: clamp(3rem, min(6.6vw, 10vh), 6rem);
 }
 
 .os .hero p {
@@ -767,7 +805,7 @@ html.os,
 .os .foot {
   position: absolute;
   right: 1rem;
-  bottom: 0.375rem;
+  bottom: 0.5rem;
 }
 
 .os .files {
@@ -782,17 +820,13 @@ html.os,
   display: flex;
   flex-direction: column;
   max-height: calc(100% - 2rem);
-  box-shadow: 0 8px 20px -12px rgb(0 0 0 / 0.6);
+  box-shadow: var(--elevation-2);
   transition: opacity 180ms var(--ease-out), scale 180ms var(--ease-out), display 180ms allow-discrete;
 }
 
 .os .win.front {
-  box-shadow: 0 22px 44px -14px rgb(0 0 0 / 0.8);
+  box-shadow: var(--elevation-3);
   border-color: var(--border);
-}
-
-.os .win:not(.front) .win-bar {
-  background: var(--canvas);
 }
 
 .os .term:not(.front) .win-bar {
@@ -804,7 +838,7 @@ html.os,
 }
 
 .os .term.front .win-bar {
-  color: var(--term-ink);
+  color: var(--ink);
 }
 
 .os .win:not(.open) {
@@ -835,7 +869,7 @@ html.os,
 
 /* Maximised: the window fills the desk; the text column keeps a readable width. */
 .os #desk .win.max {
-  inset: 0.75rem 0.75rem 1.75rem; /* leaves the Privacy link visible underneath */
+  inset: 0.75rem 0.75rem 2rem; /* leaves the Privacy link visible underneath */
   width: auto;
   height: auto;
   max-height: none;
@@ -846,7 +880,7 @@ html.os,
 }
 
 .os .win.max:not(.term) .win-body {
-  padding-inline: max(1.5rem, calc((100% - 44rem) / 2));
+  padding-inline: max(1.5rem, calc((100% - 40rem) / 2));
 }
 
 .os .win.dragging .win-bar {
